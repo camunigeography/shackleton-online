@@ -1,0 +1,35 @@
+
+// Colour pallette
+$c-primary:     #003e74;
+$c-secondary:   #005dab;
+$c-tertiary:    #004e8f;
+
+$c-dark:        #333;
+$c-grey:        #999;
+$c-gray:        $c-grey;
+$c-light:       #efefef;
+$c-off-white:   #fafafa;
+
+$c-link:        $c-primary;
+
+
+// Fonts
+$font-light:  "myriad-pro-n3","myriad-pro",myriad,verdana,arial,sans-serif;
+$font-normal: "myriad-pro-n4","myriad-pro",myriad,verdana,arial,sans-serif;
+$font-bold:   "myriad-pro-n6","myriad-pro",myriad,verdana,arial,sans-serif;
+
+
+// Avalanche settings
+$av-widths: ( 2, 3, 4, 5, 6 );
+$av-width-class-namespace:  'u-';
+$av-breakpoints:  (
+  "phone":                "screen and (max-width: 549px)",
+  "portrait-tab":         "screen and (min-width: 550px) and (max-width: 767px)",
+  "portrait-tab-and-up":  "screen and (min-width: 550px)",
+  "landscape-tab":        "screen and (min-width: 768px) and (max-width: 1023px)",
+  "landscape-tab-and-up": "screen and (min-width: 768px)",
+  "desktop":              "screen and (min-width: 1024px)"
+);
+$av-enable-grid-middle: true;
+$av-enable-grid-flush: true;
+$av-enable-grid-small: true;

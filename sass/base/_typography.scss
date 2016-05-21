@@ -1,0 +1,59 @@
+/*------------------------------------*\
+   #TYPOGRAPHY
+\*------------------------------------*/
+
+// Re-setting base font size in em units (instead of px) for grid system
+html{
+  font-size: 0.75em;
+}
+
+// Mobile font sizing (copied from CAM stylesheet)
+@media (max-width: 767px) {
+  body, label, input, button, select, textarea, h4, h5, h6{
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+  li{
+    margin-bottom: 0;
+  }
+}
+
+
+img{
+  max-width: 100%;
+}
+
+
+/**
+ * Section headings
+ * Example: Teaser cards on homepage
+ */
+.section-headings{
+  margin: 20px 0 30px;
+  // text-align: center;
+
+  h2{
+    font: 300 28px/1.26667 $font-light;
+  }
+
+  h3{
+    font: 600 19px/1.26667 $font-bold;
+  }
+}
+
+
+/**
+ * Quotations
+ */
+blockquote{
+  padding: 0;
+  margin: 20px 25px;
+  background: none;
+
+  cite{
+    margin-top: 5px;
+  }
+}

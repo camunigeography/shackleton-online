@@ -1,0 +1,41 @@
+/*------------------------------------*\
+   #COLLECTION SEARCH
+\*------------------------------------*/
+
+/**
+ * Big, bold search box
+ */
+.collection-search-form{
+  display: block;
+  margin-bottom: 20px;
+
+  label{
+    display: block;
+    overflow: hidden;
+  }
+
+  input, button{
+    box-sizing: border-box;
+    height: 44px;
+  }
+
+  input{
+    width: 100%;
+    padding: 0 10px;
+    border: 1px $c-light solid;
+    border-right: 0;
+  }
+
+  button{
+    float: right;
+    padding: 0 15px;
+    background: $c-grey;
+    background: $c-tertiary;
+    border: 0;
+    color: #fff;
+
+    &:hover, &:active, &:focus{
+      background: $c-secondary;
+    }
+  }
+}

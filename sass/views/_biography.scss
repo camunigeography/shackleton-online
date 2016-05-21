@@ -1,0 +1,33 @@
+/*------------------------------------*\
+   #BIOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Lead photo
+ */
+.biography-portrait{
+  position: relative;
+  top: -50px;
+  float: right;
+  max-width: 40%;
+  margin: 0 0 -40px 20px;
+}
+
+
+/**
+ * Inset photos
+ */
+.biography-inset{
+  display: block;
+  margin: 20px auto;
+
+  @include av-mq(portrait-tab-and-up){
+    float: left;
+    margin: 0 20px 10px 0;
+  }
+}
+
+.biography-inset--right{
+  float: right;
+  margin: 0 0 20px 20px;
+}

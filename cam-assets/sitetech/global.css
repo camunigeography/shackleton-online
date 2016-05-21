@@ -1,0 +1,375 @@
+/* Project Light local overrides */
+#content .campl-content-container h1 {display: none;}
+html body {background-color: white;}  /* Avoids the editor having black background in styles dialog and when the stylesheets are supplied in a web application to an ultimateForm richtext */
+/* Override from generic.css : */
+.campl-page-header .clearfix:after {content: '';}
+@media (max-width: 767px) { /* generic.css aggressively sets clearfix to have a forced display value */
+  .campl-global-navigation.clearfix {display: none;}
+}
+.campl-content-container table.portal h3 {font-size: 1em;}
+.campl-content-container table.portal td p {font-size: 0.93em;}
+.campl-content-container table.portal td ul li {font-size: 1.1em;}
+.homepage .campl-recessed-secondary-content {margin-top: -25%;} /* Adjustment because Carousel items should be height=432 but we are using 292 */
+body.group-campop #content .campl-content-container h1 {display: block;}
+body.group-campop .campl-page-title {font-size: 25px;}
+body.group-campop .campl-sub-title {font-size: 29px;}
+body.group-campop .campl-sub-title-subtitle {font-family: myriad-pro, myriad, verdana, arial, sans-serif; color: white; font-size: 19px; text-align: right; margin-top: 10px;}
+.campl-content-container input[type="radio"], .campl-content-container input[type="checkbox"] {margin-right: 3px; /* Restore to Chrome default */}
+.campl-content-container label {display: inline;}
+.campl-content-container input {width: auto; height: auto;} /* Auto reverts the width/height to the specified size */
+.campl-content-container textarea {width: auto;}  /* Auto reverts the width to the specified size */
+body .campl-content-container table {border-bottom: 0;}
+body .campl-content-container table {margin-bottom: 2em;}
+body #purecontenteditor {font-size: 100%;}
+body #purecontenteditor #administration ul li ul {left: 420px;}
+body.editorwindowstyle {background-color: white;}
+.campl-theme-1 .campl-local-navigation li.campl-selected a {background-color: #0072cf;} /* Hack to deal with generateMenu() adding the campl-selected to the list item not the link */
+.campl-theme-4 .campl-local-navigation li.campl-selected a {background-color: #57831a;} /* Hack to deal with generateMenu() adding the campl-selected to the list item not the link */
+.campl-theme-6 .campl-local-navigation li.campl-selected a {background-color: #d61746;} /* Hack to deal with generateMenu() adding the campl-selected to the list item not the link */
+body .campl-content-container ul.tabs {clear: right;}
+body .campl-content-container ul.tabs li a {padding-bottom: 6px;}
+.campl-page-header .campl-column12 .campl-content-container {padding-right: 0;}
+#local-nav .campl-unstyled-list li span {opacity: 0.5;}
+.campl-focus-teaser-txt p {color: white;}
+img.campl-sub-title {float: right; margin-left: 20px; margin-bottom: 10px;}
+#local-nav .seealso {display: none;}
+.campl-tertiary-navigation .seealso {margin-top: 2em; opacity: 0.65;}
+.campl-tertiary-navigation .seealso p {font-weight: normal;}
+#containerorganisation {color: white; padding: 0; margin: 0; margin-left: 118px;}
+/* Logo */
+.campl-page-title {margin-bottom: 0;}
+.campl-page-title img {margin-right: 10px;}
+@media (max-width: 767px) {
+  .campl-page-title img {display: none;}
+}
+/* Avoid showing link hrefs */
+body[class*='library-catalogue-conversion'] #content a[href]:after {content: "";}
+body[class*='library-catalogue-conversion'] .fieldsjumplist select {width: auto;}
+
+/* #!# Temporary */
+@media (max-width: 767px) {
+  #containerorganisation {display: none;}
+}
+
+
+/* Workarounds in library catalogue conversion area for printing bugs */
+@media print {
+  /* Avoid extra page in Firefox and Chrome */
+  body[class*="library-catalogue-conversion"] .campl-main-content {min-height: 0 !important;}
+  /* Workaround for very odd Firefox bug where additional page-break is added */
+  @-moz-document url-prefix() {
+    body[class*="library-catalogue-conversion"] .campl-page-header {display: none;}
+  }
+}
+
+
+
+
+  
+#sidebar {float: right; width: 20%; margin: 1.2em 0 10px 22px; padding: 0 0 25px 15px; border-left: 1px solid #f0f0f0; background-color: white; min-height: 400px;}
+  
+#newsarticles h2 {clear: right; margin-bottom: 5px;}
+#newsarticles p.articledate {font-style: italic; font-size: 11px; color: #aaa; margin-top: 0;}
+#newsarticles img.shiftup {top: -4.2em;}
+#newsarticles #browseearlier {clear: right; margin-top: 4em;}
+#newsarticles #submitlink {text-align: right;}
+#newsarticles #submitlink a {vertical-align: top;}
+
+/* Biography pages */
+body.people #sidebar {font-size: 0.87em;}
+body.people #sidebar ul#contacts {margin-left: 0; padding-left: 0;}
+body.people #sidebar ul#contacts li { list-style: none;}
+body.people #sidebar p {margin-top: 1.5em;}
+body.people #sidebar acronym {border-bottom: 1px dashed #ccc;}
+body.people #sidebar img, body.people #sidebar span.photograph, .stafflist span.photograph {width: 100px; height: 120px;}
+body.people #sidebar img.larger, body.people #sidebar span.photograph {width: 150px; height: 180px;}
+body.people #sidebar img {border: 1px solid gray; margin-bottom: 15px;}
+body.people #sidebar span.photograph, .stafflist span.photograph {border: 1px dashed #eee; display: block; margin-bottom: 20px;}
+body.people #sidebar {width: 25%;}
+body.people #sidebar address {font-style: normal; margin-top: 0.2em; margin-bottom: 0.2em;}
+body.people #sidebar p.jumpto {padding-top: 1em;}
+body.people h2#biography {display: none;}
+
+/* Research project listings */
+body.research #projectlist h3, body#www-spri-cam-ac-uk.research #projectlist h2 {margin-left: 20px; padding-left: 18px; background: url(/images/general/curvedarrow.gif) no-repeat; padding-bottom: 0; margin-bottom: 0;}
+body.research #projectlist ul {margin: 7px 0 35px 80px;}
+
+/* Staff lists */
+.stafflist {font-size: 0.87em;}
+.stafflist h3 {font-weight: bold;}
+.stafflist div.person {height: 132px; float: left; width: 250px; border/*-bottom*/: 1px solid #ddd; padding: 10px 10px 0; margin: 0 10px 10px 0;}
+.stafflist div.person:hover {background-color: #fcfcfc; border-color: #aaa;}
+.stafflist #hod {display: block; height: 190px; margin-bottom: 10px;}
+.stafflist #hod p.hod {margin: 0 0 10px; color: #666;}
+.stafflist #hod div.person {margin-top: 0; height: 160px;}
+.stafflist div.person h3 {margin: 0;}
+.stafflist div.person p {text-align: left; margin-top: 10px; line-height: 1.5em;}
+.stafflist div.person img, .stafflist span.photograph {float: left; width: 75px; /*height: 120px;*/ border: 1px solid #999; margin-right: 10px;}
+ .stafflist span.photograph {height: 90px;}
+.stafflist span.photograph {border: 1px dashed #eee;}
+.stafflist div.person hr {display: none;}
+table.phdstudents a.person {font-weight: bold;}
+.stafflist p.email {float: right; color: #bbb; margin: 0 0 0 5px; padding: 0; position: relative; top: -7px; line-height: 1.1em;}
+body.people p.directornote {margin-bottom: 2em;}
+body.people ul.otherorganisations {margin-bottom: 2em;}
+
+/* Events and seminars */
+dl.seminars dt {text-align: right; float: left; width: 10em; margin: 0 0 1em 0; /* margin: match the dd */}
+dl.seminars dd {clear: right; margin: 0 0 1em 11em; font-style: normal; /* margin: match the dt except for the left margin */}
+div.logobox {float: right; margin-left: 20px; padding: 5px; border: 1px solid #ddd;}
+div.logobox p {text-align: center;}
+div.logobox img {display: block; border: 0; padding-bottom: 4px;}
+
+/* Global event listings */
+table.events td {padding-bottom: 1em;}
+table.events td.datetime {width: 15%;}
+table.events td.datetime p {margin-top: 0.4em;}
+table.events h2 {margin: 0.3em 0 0.4em;}
+table.events h4 {margin: 0 0 1em;}
+table.events p {margin-bottom: 0.5em;}
+
+
+/* Miscellaneous styles */
+/* .edit {text-align: right; font-size: 11px; font-family: verdana, arial, helvetica, sans-serif;} */
+ol.small li, ul.small li {font-family: verdana, arial, helvetica, sans-serif;}
+
+  
+
+
+
+#logo {height: 54px; margin-bottom: 10px; width: 380px; float: left;}
+#logo img {float: left; width: 108px; height: 54px; border: 0;}
+#header {height: auto; background: none; padding-top: 0;}
+#header img {margin: 0 10px 0 0;}
+#header h1, #header h2 {margin: 0; white-space: nowrap;}
+#header h1 {font-family: arial, helvetica, sans-serif; font-size: 1.6em; font-weight: bold; padding-top: 4px;}
+#header h2 {font-family: verdana, arial, helvetica, sans-serif; font-size: 1.1em; font-weight: normal; padding-top: 1px;}
+#headerbar {margin-top: 0; clear: both; height: 90px; -moz-border-radius-topLeft: 20px; background: #eee url(/images/themes/9.jpg) no-repeat center left;}
+#header div.jumplist, #header ul.widgets {width: auto; margin-right: 0; padding-top: 5px;}
+* html #header ul.widgets {margin: 0;} /* This line hidden from Win/IE5&6: left-floated logo is causing additional space between the widgets and the jumplist */
+* html #headerbar {margin-top: -5px;} /* This line hidden from Win/IE5&6: left-floated logo is causing additional space between the widgets and the jumplist */
+#menu li.selected a {color: #286ea0;}
+p.locationline {margin-top: 0; padding-top: 0; border-bottom: 1px solid #eee; padding-bottom: 1px; text-align: left;}
+#header a, p.locationline a {border-bottom: 0;}
+#header a {color: #808080; text-decoration: none;}
+#header li a {color: #808080; font-weight: normal;}
+body.homepage p.locationline {display: none;}
+div.contextbox2 {margin-top: 3em;}
+
+
+/* nabos 2006 blog */
+body.resources-schools-nabos2006 h2 {border-bottom: 1px dashed #ddd; margin-bottom: 0;}
+body.resources-schools-nabos2006 p.signature {margin-top: 0; color: gray;}
+
+/* SPRI Review */
+h1.sprireview {color: #fff; margin: 0px; padding: 10px; width: 449px; height: 140px; background-repeat: no-repeat;}
+div.sprireview {border: 1px dotted gray; padding: 12px; margin-top: 5px;}
+
+/* Photos */
+div.expeditions {display: block; float: left; text-align: center; width: 200px; height: 240px;}
+div.expeditions img {border: 1px solid #333; margin: 10px 4px 2px;}
+div.expeditions p {color: #666; margin-top: 0; margin-bottom: 0; text-align: center;}
+
+/* Virtual Shackleton */
+#virtualshackleton div.frontpagebox {border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+#virtualshackleton img.frontpage {width: 153px; height: 200px; float: right; margin: -30px 0 10px; padding-left: 20px; border: 0; background-color: white;}
+#virtualshackleton h2.article {margin-top: 0; height: 50px;}
+#virtualshackleton div.infobox {border-style: solid; border-color: #eee; border-width: 1px 0; padding: 0; color: #999;}
+#virtualshackleton div.infobox p {margin: 8px 0;}
+#virtualshackleton div.infobox a {color: #36f;}
+#virtualshackleton div.context {float: right; width: 222px; margin-left: 20px;}
+#virtualshackleton div.context ul {margin: 4px 0; padding: 0;}
+#virtualshackleton div.context li {list-style-type: none; text-align: center;}
+#virtualshackleton div.context img {border: 0; width: 10px; height: 10px; padding: 0 5px;}
+#virtualshackleton div.context img a {display: block;}
+#virtualshackleton div.context span.blank {width: 20px; padding: 0; height: 10px;}
+#virtualshackleton div.image {float: right; width: 200px; margin: 0 0 10px 20px; min-height: 60px; border: 1px solid #ddd; padding: 10px; text-align: center;}
+#virtualshackleton div.image img {border: 0;}
+#virtualshackleton div.image p.imagecopyright {margin-top: -3px; text-align: right; font-style: italic;}
+#virtualshackleton div.image p.imagecopyright a {color: #36f;}
+#virtualshackleton div.image p {text-align: center; font-style: italic; margin-top: 5px;}
+#virtualshackleton div.imagenone {border-color: #eee; border-style: dotted;}
+#virtualshackleton div.imagelarge {float: none; margin: 0 auto; width: 400px;}
+#virtualshackleton div.linebreak {clear: both;}
+#virtualshackleton div#images {clear: left;}
+#virtualshackleton div#images div.image {float: left;}
+#virtualshackleton div.metadata {margin-right: 242px; margin-bottom: 25px;}
+#virtualshackleton div.article p {margin-top: 11px; margin-bottom: 11px;}
+#virtualshackleton ul.types {margin-left: 5px; padding-left: 0;}
+#virtualshackleton ul.types li {margin-top: 12px; list-style-type: none;}
+#virtualshackleton ul.types ul {margin-left: 15px;}
+#virtualshackleton ul.types li li {margin-top: 4px;}
+
+/* Friends */
+body.friends ul.events {text-align: left;}
+body.friends table.events {border-top: 1px solid #eee;}
+body.friends table.events td {padding: 10px 5px 5px;}
+body.friends table.events td p {padding: 0; margin: 8px 0 0;}
+body.friends table.events td.photo a {border-bottom: 0;}
+body.friends table.events h2 {margin: 0 0 15px; font-size: 1em; font-weight: bold; font-style: normal;}
+body.friends table.events h2 a {font-size: 1.4em; font-weight: normal;}
+body.friends table.events td {height: 125px;}
+body.friends table.events td.photo img {width: 120px; border: 1px solid gray;}
+
+/* Friends sponsorship */
+body.friends-donate #form_target_general, body.friends-donate #form_target_dogsledge, body.friends-donate #form_target_murray, /* body.friends-donate #form_target_dogsledgeextreme, */ body.friends-donate #form_target_greenlandtrek {margin-bottom: 1em;}
+body.friends-donate p.submit {border-top: 0;}
+body.friends-donate p.submit input.button {font-size: 1.3em;}
+
+/* Online shop */
+body.shop .item {overflow: auto; border: 1px solid #933; margin-bottom: 18px; padding: 15px;}
+* html body.shop .item {height: 1%;} /* Force IE to enclose the box fully */
+body.shop .item:hover {background-color: #fcfcfc; border-color: #603;}
+body.shop .item h2 {padding: 5px 0; font-size: 1.4em; border-bottom: 0; margin: 0;/* margin-right: 140px;*/}
+body.shop .item h2 a {padding: 5px 0; border: 1px solid white; display: block;}
+body.shop .item h2 a:hover {border-bottom-color: gray; border-right-color: gray; background-color: #f7f7f7; text-decoration: none;}
+body.shop .item img, body.shop span.noimage {/* position: relative; top: -30px; */ text-align: center; border: 1px solid gray; background-color: white; margin: 5px 0 10px 15px; float: right;} /* NB: Using float:left triggers the IE/Win Guillotine Bug - see www.positioniseverything.net/explorer/guillotine.html */
+body.shop span.noimage {height: 100px;}
+body.shop span.noimage {width: 95px; padding: 13px; font-style: italic; border: 1px dashed #ccc;}
+body.shop span.noimage {\width: 110px; w\idth: 95px;} /* IE5.x/Win box model hack */
+body.shop span.noimage, body.shop span.noimage a {color: #bbb;}
+body.shop span.noimage a:hover {text-decoration: none;}
+body.shop ul.types li {font-weight: bold;}
+/* body.shop .info {display: block;} */
+* html body.shop .info {height: 1%;} /* Fix 3px jog IE bug and force IE not to wrap around image */
+body.shop .item p.author {line-height: 1em; font-style: italic; margin: 0 0 2px 0;}
+body.shop .item p.moreinfo {float: right; margin: 0;}
+body.shop .item p.moreinfo a {width: 125px; color: black; display: block; text-decoration: none; border: solid 1px #ddd; background-color: #fff; padding: 3px 6px;}
+body.shop .item p.moreinfo a:hover {border-color: #6100c1; background-color: #f0e1ff;}
+body.shop .item p.description {font: 1.2em georgia, "trebuchet MS", arial, sans-serif;}
+body.shop .item p.publisher, body.shop .item p.price, body.shop .item p.stock {color: gray; margin: 2px 0;}
+body.shop .item p.publisher a, body.shop .item p.price a, body.shop .item p.stock a {color: gray; border-bottom: 1px solid #eee;}
+body.shop .item p.publisher a:hover, body.shop .item p.price a:hover, body.shop .item p.stock a:hover {text-decoration: none;}
+body.shop .item p.price {font-weight: bold; color: #333;}
+body.shop .item span.vat {font-weight: normal; color: #bbb;}
+body.shop #parameters {border-top: 0px solid #f7f7f7; margin: 0 0 25px; padding: 2px 0;}
+/* Pagination and order-by box */
+body.shop p.pagination, p.orderby {font-size: 83%;}
+body.shop p.pagination, body.shop p.orderby {line-height: 1.8em; margin: 2px 0; border-bottom: 0px solid #f7f7f7;}
+body.shop p.pagination strong, body.shop p.pagination span, body.shop p.orderby strong {color: #aaa;}
+body.shop p.pagination a, body.shop p.orderby a {color: #333;}
+body.shop p.pagination a, body.shop p.pagination strong, body.shop p.pagination span, body.shop p.orderby a, body.shop p.orderby strong {padding: 1px 5px; border: 1px solid #ccc;}
+body.shop p.pagination strong, body.shop p.orderby strong {border-color: #333;}
+body.shop p.pagination a:xvisited, p.pagination a.first, body.shop p.orderby a:xvisited {background-color: #eee;}
+body.shop p.pagination a.selected, p.pagination a.selected:xvisited, body.shop p.orderby a.selected, p.orderby a.selected:xvisited {background-color: #bbb;}
+body.shop p.pagination a:hover, body.shop p.orderby a:hover {border-color: #6100c1; background-color: #f0e1ff; text-decoration: none;}
+/* Front page */
+body.shop #categories {display: block; margin: 0; padding: 0;}
+body.shop #categories li {display: inline; height: 125px; width: 165px; border: 1px solid #933; text-align: center; float: left; margin: 0 9px 9px 0; padding: 5px 0px;}
+body.shop #categories li a {background-color: white; border: 0; padding-bottom: 0;} /* Reset default link styling */
+body.shop #categories li a:hover {background-color: transparent;} /* Reset default link styling */
+body.shop #categories li:hover {position: relative; top: 1px; left: 1px; background-color: #f7f7f7;} /* Not supported by IE6 */
+body.shop #categories li img, body.shop #categories li span.blank {margin: auto; width: 120px; height: 105px; display: block; border: 0;}
+body.shop #categories li a {color: #009; font-weight: bold; display: block;}
+body.shop #categories li a:hover {text-decoration: none;}
+body.shop ul.featureditems {list-style-image: url(/images/icons/star.png); margin-left: 20px; line-height: 1.3em;}
+body.shop .item p.adminloginlink img, body.shop p.adminloginlink img {float: none; border: 0; vertical-align: middle; padding: 0 3px 0 0; margin: 0;}
+
+/* Freeze Frame */
+.resources-freezeframe #content {background-color: #f3f3f3; min-height: 500px; border: 1px solid #bbb; padding-right: 10px;}
+/*.resources-freezeframe #logos {position: absolute; right: 30px; top: 218px;}*/
+.resources-freezeframe #logos {margin-top: 110px; border-top: 1px solid #ddd; padding-top: 20px; height: 105px; clear: both;}
+.resources-freezeframe #logos a {display: block; float: left; margin-right: 20px; height: 52px; width: 254px; border: 1px solid #ccc; padding: 7px 15px; text-align: center; margin-bottom: 10px; background-color: white;}
+.resources-freezeframe #logos a:hover {background-color: #f7f7f7; border-color: #bbb;}
+.resources-freezeframe #logos a img {margin: 0;}
+.resources-freezeframe h1 {margin-bottom: 0;}
+.resources-freezeframe h4 {text-indent: 100px;}
+.resources-freezeframe h5 {text-transform: uppercase; margin-top: 5px; font-style: italic; color: gray; margin-left: 5px;}
+
+/* Exhibitions */
+body.museum-exhibitions table img {border: 0; margin-right: 10px;}
+body.museum-exhibitions table td.key a {border: 0;}
+body.museum-exhibitions table td {padding-bottom: 10px; vertical-align: top;}
+
+/* Museum */
+body.museum #sidebar {width: 14em; font-size: 0.83em;}
+body.museum #sidebar h3 {font-weight: bold; font-size: 12px; margin-top: 20px;}
+body.museum #museum #body {margin-right: 14em;}
+body.museum #museum h2 a, body.museum #museum h3 a {border: 0;}
+body.museum #museum img.icon {border: 0; width: 16px; height: 16px;}
+body.museum #museum div#catalogue p, body.museum #museum div#catalogue ul {font-size: 0.83em;}
+/* DIV version - basically unreliable at smaller screen sizes
+body.museum #museum #exhibitions {margin-bottom: 20px; width: 100%; display: block; min-height: 180px; border: 1px solid red;}
+body.museum #museum #exhibitions .exhibition {float: left; min-width: 250px; width: 35%; height: 100px; border: 2px dashed #ddd; margin-right: 10px; padding: 10px; margin-bottom: 10px; font-size: 0.83em;}
+body.museum #museum #exhibitions .exhibition img {width: 100px; height: 100px; border: 1px solid #ddd; float: left; margin-right: 10px;}
+body.museum #museum #exhibitions .exhibition p {line-height: 1.3em; text-align: left; padding: 0; margin-top: 0; color: #555;}
+*/
+body.museum #museum table#exhibitions {width: 98%; border-collapse: collapse; margin-bottom: 15px;}
+* html body.museum #museum table#exhibitions {width: 90%;}  /* Fix for IE<7 only */
+* html body.museum #museum div#catalogue {width: 90%;}  /* Fix for IE<7 only */
+body.museum #museum table#exhibitions td {padding: 10px 20px 10px 10px; border: 2px dashed #ddd; font-size: 0.83em; vertical-align: top;}
+/* * html body.museum #sidebar {width: expression(document.body.clientWidth <755 ? "100px" : "14em");}  Fix for IE<7 only */
+/* * html body.museum #museum #body {margin-right: expression(document.body.clientWidth <755 ? "110px" : "14em");}  Fix for IE<7 only */
+* html body.museum table#exhibitions td {padding: expression(document.body.clientWidth <755 ? "2px" : "10px");} /* Fix for IE<7 only */
+body.museum #museum table#exhibitions td img {width: 7em; height: 7em; float: left; border: 1px solid #ddd; margin: 0 10px 10px 0;}
+body.museum #museum table#exhibitions td p {line-height: 1.3em; text-align: left; padding: 0; margin-top: 0; color: #555; wrap: no-wrap;}
+
+body.museum table.gallery td img {margin-top: 20px;}
+
+/* Research projects */
+ul.integral li a {border-bottom: 0; padding: 10px 10px; font-weight: bold; color: white; text-decoration: none; background-color: transparent;}
+table.integral td.key, table.integral td.key a, table.integral th.key, table.integral th.key a {color: olive;}
+table.integral th {color: teal; font-weight: bold;}
+
+/* Courses */
+.courses-mphil div.contextbox2 {float: none; width: auto; border-left: 0; margin: 0; padding: 0;}
+.courses-mphil div.introduction td {vertical-align: top; border-top: 1px solid #eee; padding-top: 10px;}
+.courses-mphil div.introduction td.key {padding-right: 20px;border-right: 2px solid #ccc;}
+.courses-mphil div.introduction td.value {padding-left: 20px;}
+.courses-mphil div.introduction h1 {font-size: 2.7em; text-align: center; margin-top: 10px; margin-bottom: 0;}
+.courses-mphil div.introduction h4 {font-size: 1.8em; font-weight: normal; font-style: normal; text-align: center; margin-top: 8px;}
+.courses-mphil div.introduction h1 a, .courses-mphil div.introduction h4 a {border-bottom: 0;}
+.courses-mphil div.introduction h1 a:hover, .courses-mphil div.introduction h4 a:hover {background-color: white;}
+.courses-mphil div.introduction ul li {color: #555;}
+.courses-mphil div.introduction ul.actions {margin-top: 2em; margin-left: 5em;}
+
+/* SPRILIB legacy search system */
+.library table.topterms td, .picturelibrary-database table.topterms td {background-color: #ccffcc;}
+.library input.mainsearch, .picturelibrary-database input.mainsearch {font-size: 1.4em; padding: 0.4em;}
+.library input.mainsearch.entrybox, .picturelibrary-database input.mainsearch.entrybox {color: #603; width: 250px;}
+body.library-catalogue-russian {min-width: 1200px;}
+.library-catalogue-russian #transliterationtable {float: right; border-left: 1px solid #ddd; padding: 10px; width: 150px; margin-left: 15px;}
+.library-catalogue-russian #transliterationtable table {border-collapse: collapse;}
+.library-catalogue-russian #transliterationtable h2, #transliterationtable td, #transliterationtable th, #transliterationtable p {font-family: verdana, arial, helvetica, sans-serif; font-size: 0.69em;}
+.library-catalogue-russian #transliterationtable table td, #transliterationtable table th {padding: 2px; border-top: 1px solid #ddd; margin: 0;}
+
+/* Polar directory */
+#polardirectories p.adminloginlink {float: right;}
+#polardirectories table.countrylisting {margin-top: 15px;}
+#polardirectories table.countrylisting td {vertical-align: top; padding-right: 25px;}
+#polardirectories table.entries {width: 99%;}
+#polardirectories table.entries td p:first-child {margin-top: 0; padding-top: 0;}
+#polardirectories table.entries tr td:first-child {color: gray; width: 100px;}
+#polardirectories table.entries tr.englishEquivalent td {font-style: italic;}
+#polardirectories h3 {margin-top: 2.5em;}
+#polardirectories .jumplist {margin-bottom: 1.5em;}
+#polardirectories .search input.searchbox {font-size: 1.4em; color: #603; padding: 4px;}
+#polardirectories ul.filtering {margin-top: 1.5em;}
+#polardirectories ul.filtering .selected {font-weight: bold;}
+
+/* Social networking links */
+p#socialnetworkinglinks {margin-top: 20px;}
+p#socialnetworkinglinks a.twitter {border: 0; margin: 0 4px 5px 0; display: block;}
+p#socialnetworkinglinks a.twitter:hover {background-color: transparent;}
+
+/* Media listings */
+body.media-articles table td:first-child {width: 150px;}
+body.media-articles table td a.editlink {display: block; width: 50px;}
+
+/* Research projects */
+body.research-projects-snowlab {background-color: #c6dcdc;}
+body.research-projects-snowlab #sidebar {display: none;}
+body.research-projects-safire table td:first-child a.campl-external {background-image: none;}
+
+/* Group visits bookings system */
+body[class*='museum-groupvisits-bookings'] .hideableeditlink {display: none;}
+
+/* Archives bookings bookings system */
+body[class*='archives-bookings'] .hideableeditlink {display: none;}
+
+
+/* New design fixes - re-integrate when old design removed */
+.campl-content-container .stafflist {font-size: 0.93em;}
+.campl-content-container .stafflist div.person {width: 248px;}
+.campl-content-container .stafflist div.person h3 {padding-top: 0;}
+body.people .campl-content-container #sidebar {font-size: 0.93em;}
