@@ -1,0 +1,27 @@
+# Apache httpd.conf extract providing URL routing and other directives
+
+#   Example usage in httpd.conf:
+#   
+#   # Shackleton Online
+#   Include /path/to/shackleton-online/.httpd.conf.extract.txt
+#   Use ShackletonOnline "/museum/shackleton" "/path/to/shackleton-online" "/path/to/shackleton-online/:/path/to/php/libraries/"
+
+
+<Macro ShackletonOnline $applicationBaseUrl $repoDirectory $includePath>
+	
+	<Location $applicationBaseUrl>
+		php_value include_path "$includePath"
+	</Location>
+	
+	# Load assets
+	Alias $applicationBaseUrl/css $repoDirectory/css
+	Alias $applicationBaseUrl/images $repoDirectory/images
+	Alias $applicationBaseUrl/js $repoDirectory/js
+	
+	Use MacroFrontControllerApplication "$applicationBaseUrl/" "Shackleton Online"
+	
+	# Application directives
+	RewriteRule ^$applicationBaseUrl/(article|biography|expedition)/$ $applicationBaseUrl/index.html?action=$1 [L,QSA]
+	RewriteRule ^$applicationBaseUrl/(article|biography|expedition)$ $applicationBaseUrl/$1/ [R]
+	
+</Macro>
