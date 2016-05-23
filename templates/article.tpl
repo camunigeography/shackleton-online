@@ -1,4 +1,8 @@
-{include file='cam/header.tpl'}
+{if isSet ($integrationEnabled)}
+	{include file='head.tpl'}
+{else}
+	{include file='cam/header.tpl'}
+{/if}
 
 <h1>{$article.name}</h1>
 
@@ -68,7 +72,7 @@
 <div class="grid">
   <div class="u-1/2 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
     <a class="mini-teaser" href="expedition.html">
-      <img src="/images/teasers/expedition1.jpg" alt="">
+      <img src="{$baseUrl}/images/teasers/expedition1.jpg" alt="">
       <div class="mini-teaser__caption">
         <strong>Aurora</strong>
         <br>1914-1917
@@ -78,7 +82,7 @@
   </div>
   <div class="u-1/2 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
     <a class="mini-teaser" href="biography.html">
-      <img src="/images/pioneers/crean.jpg" alt="">
+      <img src="{$baseUrl}/images/pioneers/crean.jpg" alt="">
       <div class="mini-teaser__caption">
         <strong>Biography of Thomas Crean</strong>
       </div>
@@ -91,4 +95,8 @@
 
 {include file='search-form.tpl'}
 
-{include file='cam/footer.tpl'}
+{if isSet ($integrationEnabled)}
+	{include file='foot.tpl'}
+{else}
+	{include file='cam/footer.tpl'}
+{/if}

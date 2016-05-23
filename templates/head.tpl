@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="/css/shackleton-online.css" />
+<link rel="stylesheet" href="{$baseUrl}/css/shackleton-online.css" />

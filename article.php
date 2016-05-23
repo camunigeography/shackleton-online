@@ -1,9 +1,17 @@
 <?php
-define('SMARTY_DIR',str_replace("\\","/",getcwd()).'/libs/');
+define('SMARTY_DIR', dirname (__FILE__) . '/libs/');
 
 require_once(SMARTY_DIR . 'Smarty.class.php');
 
 $smarty = new Smarty;
+
+$baseUrl = '';
+if (class_exists ('frontControllerApplication')) {
+	$smarty->setTemplateDir (dirname (__FILE__) . '/templates/');
+	$smarty->assign ('integrationEnabled', true);
+	$baseUrl = $this->baseUrl;
+}
+$smarty->assign ('baseUrl', $baseUrl);
 
 $smarty->assign('article', 
   array(
@@ -17,14 +25,14 @@ $smarty->assign('article',
     'images' => array(
       array(
         'title' => 'Face of the watch',
-        'thumbnail' => '/images/treasures/watch.jpg',
-        'large' => '/images/watch.jpg',
+        'thumbnail' => $baseUrl . '/images/treasures/watch.jpg',
+        'large' => $baseUrl . '/images/watch.jpg',
         'dimensions' => '400x592'
       ),
       array(
         'title' => 'Rear of the watch',
-        'thumbnail' => '/images/treasures/watch2.jpg',
-        'large' => '/images/watch2.jpg',
+        'thumbnail' => $baseUrl . '/images/treasures/watch2.jpg',
+        'large' => $baseUrl . '/images/watch2.jpg',
         'dimensions' => '400x494'
       )
     )

@@ -1,4 +1,8 @@
-{include file='cam/header.tpl'}
+{if isSet ($integrationEnabled)}
+	{include file='head.tpl'}
+{else}
+	{include file='cam/header.tpl'}
+{/if}
 
 <h1>{$person.name}</h1>
 
@@ -17,7 +21,7 @@
 </blockquote>
 <p>In 1910 Scott gladly accepted Crean for his British Antarctic Expedition 1907-09 (Terra Nova). As a member of the final support party, he accompanied Scott’s Polar Party up the Beardmore Glacier and onto the Antarctic Plateau.  On the return journey, he and William Lashly pulled Lieutenant Teddy Evans, who was terribly sick with scurvy, on a sledge for many days. When Evans became too ill to be moved, Crean walked the last 35 miles to Hut Point alone to summon help.  For their roles in rescuing Evans, Crean and Lashly received the Albert Medal for bravery.</p>
 <p>Promoted to chief petty officer, after the expedition Crean was posted to the naval barracks at Chatham. In May 1914 he was accepted as a member of the Imperial Trans-Antarctic Expedition 1914-16 (Endurance). He joined Endurance as second officer, thus becoming one of the few men to serve under both Scott and Shackleton. Shackleton decided to include Crean in the six-man party that would cross the Antarctic continent. During the time aboard Endurance, Crean was responsible for one of the six dog teams, but his dogs were all eventually shot after the ship sank and it was decided that the men, forced to camp for months on the ice, could no longer afford to feed them.</p>
-<img class="biography-inset" src="/images/tom-crean2.jpg" alt="Tom Crean">
+<img class="biography-inset" src="{$baseUrl}/images/tom-crean2.jpg" alt="Tom Crean">
 <p>Crean proved to be a vital asset to the party’s survival. On the voyage to Elephant Island, he was second in command of one of the three boats. Selected for the attempt to reach South Georgia in James Caird, Crean then accompanied Shackleton and Frank Worsley on the epic trek over the previously unexplored interior of South Georgia to the Norwegian whaling station at Stromness. And when Shackleton finally returned to Elephant Island to rescue his men, Crean was still at his side.</p>
 <p>Crean returned to Britain in November 1916 and resumed his naval career. He served in the Great War, during which he was promoted to acting boatswain. Towards the end of the war he married Nell Herlihy, his childhood sweetheart. In March 1920 he was invalided out of the navy with defective vision following a fall while serving in HMS Fox.</p>
 <p>Shackleton invited Crean to accompany him on the Shackleton-Rowett Expedition, but Crean decided instead to settle in Anascaul, where in 1927 he opened a pub named the South Pole Inn. Crean died shortly after his sixty-first birthday when delays in an operation for an acute appendicitis resulted in a fatal infection setting in. He was buried in the family tomb that he had built in the cemetery at Ballynacourty, close to his birthplace.</p>
@@ -48,4 +52,8 @@
 
 {include file='search-form.tpl'}
 
-{include file='cam/footer.tpl'}
+{if isSet ($integrationEnabled)}
+	{include file='foot.tpl'}
+{else}
+	{include file='cam/footer.tpl'}
+{/if}

@@ -1,4 +1,8 @@
-{include file='cam/header.tpl'}
+{if isSet ($integrationEnabled)}
+	{include file='head.tpl'}
+{else}
+	{include file='cam/header.tpl'}
+{/if}
 
 <h1>Shackleton Online</h1>
 
@@ -121,13 +125,13 @@
 
 <div class="grid grid--small grid--middle">
   <div class="u-1/3 grid__cell">
-    <img src="/images/hlf-logo.png" alt="Heritage Lottery Fund logo" style="display: block; margin: 0 auto;">
+    <img src="{$baseUrl}/images/hlf-logo.png" alt="Heritage Lottery Fund logo" style="display: block; margin: 0 auto;">
   </div>
   <div class="u-1/3 grid__cell">
-    <img src="/images/gkdf-logo.png" alt="The Gladys Krieble Delmas Foundation logo" style="display: block; margin: 0 auto;">
+    <img src="{$baseUrl}/images/gkdf-logo.png" alt="The Gladys Krieble Delmas Foundation logo" style="display: block; margin: 0 auto;">
   </div>
   <div class="u-1/3 grid__cell">
-    <img src="/images/efcf-logo.png" alt="Esmee Fairbairn Collections Fund logo" style="display: block; margin: 0 auto;">
+    <img src="{$baseUrl}/images/efcf-logo.png" alt="Esmee Fairbairn Collections Fund logo" style="display: block; margin: 0 auto;">
   </div>
 </div>
 
@@ -136,4 +140,8 @@
 
 &copy; Scott Polar Research Institute, University of Cambridge
 
-{include file='cam/footer.tpl'}
+{if isSet ($integrationEnabled)}
+	{include file='foot.tpl'}
+{else}
+	{include file='cam/footer.tpl'}
+{/if}
