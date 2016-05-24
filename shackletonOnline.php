@@ -10,6 +10,7 @@ class shackletonOnline extends frontControllerApplication
 	{
 		# Specify available arguments as defaults or as NULL (to represent a required argument)
 		$defaults = array (
+			'h1' => '',
 			'useDatabase' => false,
 			'disableTabs' => true,
 			'useTemplating' => true,
