@@ -2,7 +2,7 @@
 
 # Define the settings
 $settings = array (
-	
+	'apiBaseUrl' => '...',
 );
 
 # Load and run the Shackleton Online class

@@ -14,6 +14,7 @@ class shackletonOnline extends frontControllerApplication
 			'useDatabase' => false,
 			'disableTabs' => true,
 			'useTemplating' => true,
+			'apiBaseUrl' => NULL,
 		);
 		
 		# Return the defaults
@@ -82,8 +83,18 @@ class shackletonOnline extends frontControllerApplication
 	
 	
 	# Biography
-	public function biography ()
+	public function biography ($id)
 	{
+		# Get the data from the API
+		$apiUrl = $this->settings['apiBaseUrl'] . '/biography?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl;
+		$result = file_get_contents ($apiUrl);
+		$person = json_decode ($result, true);
+		// application::dumpData ($person);
+		
+		# Format the about text
+		$person['about'] = application::formatTextBlock ($person['about']);
+		
+		/*
 		# Obtain the article
 		$person = array (
 			'name' => 'Thomas Crean',
@@ -122,7 +133,7 @@ class shackletonOnline extends frontControllerApplication
 				<p>Crean was awarded the Polar Medal in silver for each of his three Antarctic expeditions. He is commemorated by Mount Crean (77°53'S, 159°30'E), a rocky mountain forming the central and highest summit of the Lashly Mountains in South Victoria Land, and by the Crean Glacier (54°08'S, 37°01'W), a four-mile-long glacier that flows from Wilckens Peaks to the head of Antarctic Bay on the north coast of South Georgia.</p>
 			",
 		);
-		
+		*/
 		
 		# Pass the data into the template
 		$this->template['person'] = $person;
