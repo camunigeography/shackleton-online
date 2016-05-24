@@ -4,7 +4,7 @@
 #   
 #   # Shackleton Online
 #   Include /path/to/shackleton-online/.httpd.conf.extract.txt
-#   Use ShackletonOnline "/museum/shackleton" "/path/to/shackleton-online" "/path/to/shackleton-online/:/path/to/php/libraries/"
+#   Use ShackletonOnline "/museum/shackleton" "/path/to/shackleton-online" "/path/to/shackleton-online/:/path/to/smarty/:/path/to/php/libraries/"
 
 
 <Macro ShackletonOnline $applicationBaseUrl $repoDirectory $includePath>
