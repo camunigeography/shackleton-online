@@ -12,6 +12,7 @@ class shackletonOnline extends frontControllerApplication
 		$defaults = array (
 			'useDatabase' => false,
 			'disableTabs' => true,
+			'useTemplating' => true,
 		);
 		
 		# Return the defaults
@@ -51,6 +52,19 @@ class shackletonOnline extends frontControllerApplication
 	}
 	
 	
+	# Additional main processing
+	public function main ()
+	{
+		# Enable integration
+		#!# Temporary while templates subject to potential change
+		$this->template['integrationEnabled'] = true;
+		
+		# Pass the baseUrl to the template
+		$this->template['baseUrl'] = $this->baseUrl;
+		
+	}
+	
+	
 	
 	# Home
 	public function home ()
@@ -69,7 +83,39 @@ class shackletonOnline extends frontControllerApplication
 	# Biography
 	public function biography ()
 	{
-		require_once ('biography.php');
+		# Obtain the article
+		$person = array (
+			'name' => 'Thomas Crean',
+			'portrait' => $this->baseUrl . '/images/tom-crean.jpg',
+			'alias' => 'Hurrah the Willah (nom de plume on Discovery, Terra Nova and Endurance expeditions)',
+			'rank' => 'Acting boatswain (Royal Navy)',
+			'dates' => '1877-1938',
+			'nationality' => 'British',
+			'awards' => 'Polar medal (silver), Albert medal',
+			'expeditions' => array (
+				array (
+					'title' => 'Aurora',
+					'date' => '1914-1917',
+					'image' => $this->baseUrl . '/images/teasers/expedition1.jpg',
+					'link' => 'expedition.php'
+				),
+				array (
+					'title' => 'Quest',
+					'date' => '1921-1922',
+					'image' => $this->baseUrl . '/images/teasers/expedition2.jpg',
+					'link' => 'expedition.php'
+				),
+			),
+		);
+		
+		# Pass the data into the template
+		$this->template['person'] = $person;
+		
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
 	}
 	
 	
