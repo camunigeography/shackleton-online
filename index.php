@@ -4,10 +4,10 @@ define('SMARTY_DIR', dirname (__FILE__) . '/libs/');
 require_once(SMARTY_DIR . 'Smarty.class.php');
 
 $smarty = new Smarty;
+$smarty->setTemplateDir (dirname (__FILE__) . '/app/views/');
 
 $baseUrl = '';
 if (class_exists ('frontControllerApplication')) {
-	$smarty->setTemplateDir (dirname (__FILE__) . '/templates/');
 	$smarty->assign ('integrationEnabled', true);
 	$baseUrl = $this->baseUrl;
 }
