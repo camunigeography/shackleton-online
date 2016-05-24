@@ -55,7 +55,7 @@ class shackletonOnline extends frontControllerApplication
 	# Home
 	public function home ()
 	{
-		require_once ('index.php');
+		require_once ('home.php');
 	}
 	
 	

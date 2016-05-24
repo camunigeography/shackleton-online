@@ -146,5 +146,5 @@ $smarty->assign('pioneers',
   )
 );
 
-$smarty->display('index.tpl');
+$smarty->display('home.tpl');
 ?>
