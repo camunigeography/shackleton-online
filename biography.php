@@ -36,6 +36,7 @@ $smarty->assign('person',
         'image' => $baseUrl . '/images/teasers/expedition2.jpg',
         'link' => 'expedition.php'
       ),
+    ),
     'about' => "
         <p>Tom Crean was born at Gurtuchrane, a farming area near Anascaul on the Dingle Peninsula in Ireland's County Kerry. He received a rudimentary education at Brackluin School, Anascaul, and, like many of his time, saw the potential for obtaining a better life by enlisting in the Royal Navy, which he did shortly before his sixteenth birthday. Crean underwent his training on board HMS Impregnable at Devonport. By 1899 his hard work and dedication had seen him rise to petty officer second class, but in December 1900 he was demoted back to able seaman. Crean was serving on HMS Ringarooma in New Zealand in December 1901, when Robert Falcon Scott required a replacement sailor for Discovery on his British National Antarctic Expedition 1902-04 (Discovery). Crean volunteered and was accepted. During the expedition, Crean's performance was so impressive that Scott recommended he be promoted to petty officer first class.</p>
         <blockquote>
@@ -49,7 +50,6 @@ $smarty->assign('person',
         <p>Crean returned to Britain in November 1916 and resumed his naval career. He served in the Great War, during which he was promoted to acting boatswain. Towards the end of the war he married Nell Herlihy, his childhood sweetheart. In March 1920 he was invalided out of the navy with defective vision following a fall while serving in HMS Fox.</p>
         <p>Shackleton invited Crean to accompany him on the Shackleton-Rowett Expedition, but Crean decided instead to settle in Anascaul, where in 1927 he opened a pub named the South Pole Inn. Crean died shortly after his sixty-first birthday when delays in an operation for an acute appendicitis resulted in a fatal infection setting in. He was buried in the family tomb that he had built in the cemetery at Ballynacourty, close to his birthplace.</p>
         <p>Crean was awarded the Polar Medal in silver for each of his three Antarctic expeditions. He is commemorated by Mount Crean (77°53'S, 159°30'E), a rocky mountain forming the central and highest summit of the Lashly Mountains in South Victoria Land, and by the Crean Glacier (54°08'S, 37°01'W), a four-mile-long glacier that flows from Wilckens Peaks to the head of Antarctic Bay on the north coast of South Georgia.</p>",
-    )
   )
 );
 

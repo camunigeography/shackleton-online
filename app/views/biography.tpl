@@ -8,8 +8,8 @@
 
 <img class="biography-portrait" src="{$person.portrait}" alt="{$person.name}">
 
-<p><strong>Alias:</strong> {$person.alias}</p>
-<p><strong>Rank:</strong> {$person.rank}</p>
+<p><strong>Alias:</strong> {(($person.alias) ? $person.alias : '<em class="comment">None</em>')}</p>
+<p><strong>Rank:</strong> {(($person.rank) ? $person.rank : '<em class="comment">Unknown</em>')}</p>
 <p><strong>Dates:</strong> {$person.date}</p>
 <p><strong>Nationality:</strong> {$person.nationality}</p>
 <p><strong>Awards:</strong> {$person.awards}</p>
