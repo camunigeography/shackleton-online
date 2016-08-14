@@ -11,8 +11,8 @@
 <p><strong>Alias:</strong> {(($person.alias) ? $person.alias : '<em class="comment">None</em>')}</p>
 <p><strong>Rank:</strong> {(($person.rank) ? $person.rank : '<em class="comment">Unknown</em>')}</p>
 <p><strong>Dates:</strong> {$person.date}</p>
-<p><strong>Nationality:</strong> {$person.nationality}</p>
-<p><strong>Awards:</strong> {$person.awards}</p>
+<p><strong>Nationality:</strong> {(($person.nationality) ? implode (', ', $person.nationality) : '<em class="comment">Unknown</em>')}</p>
+<p><strong>Awards:</strong> {(($person.awards) ? implode ('; ', $person.awards) : '<em class="comment">None</em>')}</p>
 
 {$person.about}
 
