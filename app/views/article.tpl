@@ -17,7 +17,7 @@
   </div>
 </div>
 
-{$article.bodyCopy}
+{$article.about}
 
 <div id="photoGallery" class="gallery">
   <div class="grid">

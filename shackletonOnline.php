@@ -147,9 +147,30 @@ class shackletonOnline extends frontControllerApplication
 	
 	
 	# Expedition
-	public function expedition ()
+	public function expedition ($id)
 	{
-		require_once ('expedition.php');
+		if (!$id) {
+			require_once ('expedition.php');
+			return;
+		}
+		
+		# Get the data from the API
+		$apiUrl = $this->settings['apiBaseUrl'] . '/expedition?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '&urlPrefixPeople=/biographies';
+		$result = file_get_contents ($apiUrl);
+		$expedition = json_decode ($result, true);
+		//application::dumpData ($expedition);
+		
+		# Format the about text
+		$expedition['about'] = application::formatTextBlock ($expedition['about']);
+		
+		# Pass the data into the template
+		$this->template['expedition'] = $expedition;
+		
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
 	}
 }
 

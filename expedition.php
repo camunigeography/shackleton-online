@@ -20,8 +20,8 @@ $smarty->assign('expedition',
     'leader' => 'Captain Aeneas Mackintosh',
     'date' => '1914-1917',
     'banner' => $baseUrl . '/images/expedition-banner.jpg',
-    'bodyCopy' => '<p>The Ross Sea expedition was organised by Sir Ernest Henry Shackleton to meet the polar party from Endurance.</p><p>It was intended that Aurora would winter at Cape Royds. However, Captain Mackintosh and nine men were left ashore when she was driven from her mooring in a blizzard. Aurora was beset for ten months in the Ross Sea before reaching New Zealand.</p><p>Against all the odds, the stranded shore party laid food and fuel depots for Shackletons expected party towards the Beardmore Glacier. Of the ten men left ashore only seven survived, Captain Mackintosh was among those who died.</p>',
-    'personnel' => array(
+    'about' => '<p>The Ross Sea expedition was organised by Sir Ernest Henry Shackleton to meet the polar party from Endurance.</p><p>It was intended that Aurora would winter at Cape Royds. However, Captain Mackintosh and nine men were left ashore when she was driven from her mooring in a blizzard. Aurora was beset for ten months in the Ross Sea before reaching New Zealand.</p><p>Against all the odds, the stranded shore party laid food and fuel depots for Shackletons expected party towards the Beardmore Glacier. Of the ten men left ashore only seven survived, Captain Mackintosh was among those who died.</p>',
+    'people' => array(
       array(
         'name' => 'Ernest Shackleton',
         'role' => 'Expedition leader',

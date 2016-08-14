@@ -20,14 +20,14 @@
   </div>
 </div>
 
-{$expedition.bodyCopy}
+{$expedition.about}
 
 <header class="section-headings">
   <h3>Personnel</h3>
 </header>
 
 <div class="grid">
-{foreach from=$expedition.personnel item=person}
+{foreach from=$expedition.people item=person}
   <div class="u-1/2 u-1/4--portrait-tab u-1/3--landscape-tab u-1/5--desktop grid__cell">
     <a class="mini-teaser" href="{$person.link}">
       <img src="{$person.image}" alt="{$person.name}">

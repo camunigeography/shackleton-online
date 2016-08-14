@@ -28,4 +28,8 @@
 	RewriteRule ^$applicationBaseUrl/biographies/([^/]+)/$ $applicationBaseUrl/index.html?action=biography&item=$1 [L,QSA]
 	RewriteRule ^$applicationBaseUrl/biographies/([^/]+)$ $applicationBaseUrl/$1/ [R]
 	
+	# Expeditions
+	RewriteRule ^$applicationBaseUrl/expeditions/([^/]+)/$ $applicationBaseUrl/index.html?action=expedition&item=$1 [L,QSA]
+	RewriteRule ^$applicationBaseUrl/expeditions/([^/]+)$ $applicationBaseUrl/$1/ [R]
+	
 </Macro>
