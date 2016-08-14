@@ -6,7 +6,7 @@
 
 <h1>{$expedition.name}</h1>
 
-<img class="mb" src="{$expedition.banner}" alt="{$expedition.name}">
+<img class="mb" src="{($expedition.banner) ? $expedition.banner : "$baseUrl/images/expeditions/expedition-large.jpg"}" alt="{$expedition.name}">
 
 <br>
 
