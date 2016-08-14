@@ -15,6 +15,7 @@ class shackletonOnline extends frontControllerApplication
 			'disableTabs' => true,
 			'useTemplating' => true,
 			'apiBaseUrl' => NULL,
+			'itemCaseSensitive' => true,
 		);
 		
 		# Return the defaults
