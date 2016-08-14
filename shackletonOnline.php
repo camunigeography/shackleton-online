@@ -94,7 +94,7 @@ class shackletonOnline extends frontControllerApplication
 		$id = str_replace ('_', ' ', $id);
 		
 		# Get the data from the API
-		$apiUrl = $this->settings['apiBaseUrl'] . '/biography?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '/biographies' . '&urlPrefixExpeditions=/expeditions';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/biography?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
 		$result = file_get_contents ($apiUrl);
 		$person = json_decode ($result, true);
 		// application::dumpData ($person);
@@ -122,7 +122,7 @@ class shackletonOnline extends frontControllerApplication
 		}
 		
 		# Get the data from the API
-		$apiUrl = $this->settings['apiBaseUrl'] . '/expedition?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '&urlPrefixPeople=/biographies';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/expedition?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '&baseUrlPeople=' . $this->baseUrl . '/biographies';
 		$result = file_get_contents ($apiUrl);
 		$expedition = json_decode ($result, true);
 		//application::dumpData ($expedition);
