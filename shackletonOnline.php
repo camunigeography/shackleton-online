@@ -93,6 +93,13 @@ $apiUrl .= '&includesuppressed=1';
 		$article = json_decode ($result, true);
 		//application::dumpData ($article);
 		
+		# End if no such record
+		if ($article['error']) {
+			$html = $this->page404 ();
+			echo $html;
+			return;
+		}
+		
 		# Simplify template assignment
 		$article['expedition'] = $article['associatedExpedition'][0]['name'];
 $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
@@ -140,6 +147,13 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$person = json_decode ($result, true);
 		// application::dumpData ($person);
 		
+		# End if no such record
+		if ($person['error']) {
+			$html = $this->page404 ();
+			echo $html;
+			return;
+		}
+		
 		# Format the about text
 		$person['about'] = application::formatTextBlock ($person['about']);
 		
@@ -167,6 +181,13 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$result = file_get_contents ($apiUrl);
 		$expedition = json_decode ($result, true);
 		//application::dumpData ($expedition);
+		
+		# End if no such record
+		if ($expedition['error']) {
+			$html = $this->page404 ();
+			echo $html;
+			return;
+		}
 		
 		# Format the about text
 		$expedition['about'] = application::formatTextBlock ($expedition['about']);
