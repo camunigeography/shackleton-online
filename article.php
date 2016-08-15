@@ -15,8 +15,9 @@ $smarty->assign ('baseUrl', $baseUrl);
 
 $smarty->assign('article', 
   array(
-    'ref' => 'N: 999a',
-    'name' => 'The chronometer used during the open boat journey from Elephant Island to South Georgia in 1916',
+    'id' => 'N: 999a',
+    'title' => 'The chronometer used during the open boat journey from Elephant Island to South Georgia in 1916',
+    'briefDescription' => "A chronometer watch with a silver-plated casing, white enamel face and glass front. It belonged to Sir Ernest Shackleton and was used for navigation by Captain Frank Worsley during the boat journey from Elephant Island to South Georgia in 1916 during the Imperial Trans-Antarctic Expedition 1914-16 (Endurance). It was made by S. Smith & Son, and the reverse bears the inscription 'F.A. Worsley // From E.H. Shackleton // May 1916'. The watch originally had a wooden stand (N: 999b) with an inscribed plaque (no longer in the collection).",
     'expedition' => 'Imperial Trans-Antarctic Expedition (Aurora)',
     'expeditionLink' => 'expedition.php',
     'author' => 'N/A',

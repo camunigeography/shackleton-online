@@ -79,7 +79,7 @@ $smarty->assign('treasures',
     ),
     array(
       'title' => 'Watch',
-      'link' => 'article.php',
+      'link' => $baseUrl . '/articles/N:+999a/',
       'thumbnail' => $baseUrl . '/images/treasures/watch.jpg'
     ),
     array(

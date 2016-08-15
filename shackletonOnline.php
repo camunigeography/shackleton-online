@@ -77,9 +77,49 @@ class shackletonOnline extends frontControllerApplication
 	
 	
 	# Article
-	public function article ()
+	public function article ($id)
 	{
-		require_once ('article.php');
+		if (!$id) {
+			require_once ('article.php');
+			return;
+		}
+		
+		$id = str_replace ('_', ' ', $id);
+		
+		# Get the data from the API
+		$apiUrl = $this->settings['apiBaseUrl'] . '/article?id=' . urlencode ($id) . '&collection=VSII' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
+$apiUrl .= '&includesuppressed=1';
+		$result = file_get_contents ($apiUrl);
+		$article = json_decode ($result, true);
+		
+		# Simplify template assignment
+		$article['expedition'] = $article['associatedExpedition'][0]['name'];
+$article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
+#!# Is date intended to be the item date or the expedition date (range)?
+		$article['date'] = $article['associatedExpedition'][0]['dateBegin'] . '-' . $article['associatedExpedition'][0]['dateEnd'];
+		
+		foreach ($article['images'] as $index => $src) {
+			$imageLocation = '/museum/catalogue/images/' . $src;
+			list ($width, $height, $type, $attr) = getimagesize ($_SERVER['DOCUMENT_ROOT'] . $imageLocation);
+			$article['images'][$index] = array (
+				'title' => $article['title'],
+				'thumbnail' => $imageLocation,
+				'large' => $imageLocation,
+				'dimensions' => $width . 'x' . $height,
+			);
+		}
+		
+		# Format the about text
+		$article['briefDescription'] = application::formatTextBlock ($article['briefDescription']);
+		
+		# Pass the data into the template
+		$this->template['article'] = $article;
+		
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
 	}
 	
 	

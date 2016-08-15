@@ -4,20 +4,21 @@
 	{include file='cam/header.tpl'}
 {/if}
 
-<h1>{$article.name}</h1>
+<h1>{$article.title}</h1>
 
 <div class="grid  mb">
-  <div class="u-1/2--portrait-tab-and-up grid__cell">
+  <div class="u-2/3--portrait-tab-and-up grid__cell">
     <strong>Expedition:</strong> <a href="{$article.expeditionLink}">{$article.expedition}</a>
-    <br><strong>Author:</strong> {$article.author}
+    <!--<br><strong>Author:</strong> {$article.author}-->
+    <br><strong>Materials:</strong> {(($article.materials) ? implode (', ', $article.materials) : '<em class="comment">Unknown</em>')}
   </div>
-  <div class="u-1/2--portrait-tab-and-up grid__cell">
+  <div class="u-1/3--portrait-tab-and-up grid__cell">
     <strong>Date:</strong> {$article.date}
-    <br><strong>Ref no:</strong> {$article.ref}
+    <br><strong>Ref no:</strong> {$article.id}
   </div>
 </div>
 
-{$article.about}
+{$article.briefDescription}
 
 <div id="photoGallery" class="gallery">
   <div class="grid">
