@@ -6,7 +6,7 @@
 
 <h1>{$person.name}</h1>
 
-<img class="biography-portrait" src="{($person.portrait) ? $person.portrait : "$baseUrl/images/pioneers/person-large.jpg"}" alt="{$person.name}">
+<img class="biography-portrait" src="{($person.image) ? $person.image : "$baseUrl/images/pioneers/person-large.jpg"}" alt="{$person.name}">
 
 <p><strong>Alias:</strong> {(($person.alias) ? $person.alias : '<em class="comment">None</em>')}</p>
 <p><strong>Rank:</strong> {(($person.rank) ? $person.rank : '<em class="comment">Unknown</em>')}</p>

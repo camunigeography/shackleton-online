@@ -71,25 +71,30 @@
 <h3>Other relevant information</h3>
 
 <div class="grid">
+  {foreach from=$article.associatedExpedition item=expedition}
   <div class="u-1/2 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
-    <a class="mini-teaser" href="expedition.html">
-      <img src="{$baseUrl}/images/teasers/expedition1.jpg" alt="">
+    <a class="mini-teaser" href="{$expedition.url}">
+      <img src="{($expedition.image) ? $expedition.image : "$baseUrl/images/expeditions/expedition.jpg"}" alt="{$expedition.title}">
       <div class="mini-teaser__caption">
-        <strong>Aurora</strong>
-        <br>1914-1917
+        <strong>{$expedition.name}</strong>
+        <br>{$expedition.date}
       </div>
       <div class="mini-teaser__cta">View expedition &rarr;</div>
     </a>
   </div>
+  {/foreach}
+  {foreach from=$article.associatedPerson item=person}
   <div class="u-1/2 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
-    <a class="mini-teaser" href="biography.html">
-      <img src="{$baseUrl}/images/pioneers/crean.jpg" alt="">
+    <a class="mini-teaser" href="{$person.link}">
+      <img src="{($person.image) ? $person.image : "$baseUrl/images/pioneers/person.jpg"}" alt="{$person.name}">
       <div class="mini-teaser__caption">
-        <strong>Biography of Thomas Crean</strong>
+        <strong>{$person.name}</strong>
+        <br>{$person.role|ucfirst}
       </div>
       <div class="mini-teaser__cta">View biography &rarr;</div>
     </a>
   </div>
+  {/foreach}
 </div>
 
 <br><br>

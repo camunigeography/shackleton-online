@@ -87,10 +87,11 @@ class shackletonOnline extends frontControllerApplication
 		$id = str_replace ('_', ' ', $id);
 		
 		# Get the data from the API
-		$apiUrl = $this->settings['apiBaseUrl'] . '/article?id=' . urlencode ($id) . '&collection=VSII' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/article?id=' . urlencode ($id) . '&collection=VSII' . '&baseUrlPeople=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
 $apiUrl .= '&includesuppressed=1';
 		$result = file_get_contents ($apiUrl);
 		$article = json_decode ($result, true);
+		//application::dumpData ($article);
 		
 		# Simplify template assignment
 		$article['expedition'] = $article['associatedExpedition'][0]['name'];
