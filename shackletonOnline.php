@@ -33,15 +33,30 @@ class shackletonOnline extends frontControllerApplication
 				'url' => '',
 				'tab' => 'Home',
 			),
+			'articles' => array (
+				'description' => false,
+				'url' => 'articles/',
+				'tab' => 'Articles',
+			),
 			'article' => array (
 				'description' => false,
 				'url' => 'article/',
 				'tab' => 'Article',
 			),
+			'biographies' => array (
+				'description' => false,
+				'url' => 'biographies/',
+				'tab' => 'Biographies',
+			),
 			'biography' => array (
 				'description' => false,
 				'url' => 'biography/',
 				'tab' => 'Biography',
+			),
+			'expeditions' => array (
+				'description' => false,
+				'url' => 'expeditions/',
+				'tab' => 'Expeditions',
 			),
 			'expedition' => array (
 				'description' => false,
