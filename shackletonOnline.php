@@ -121,16 +121,8 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 #!# Is date intended to be the item date or the expedition date (range)?
 		$article['date'] = $article['associatedExpedition'][0]['dateBegin'] . '-' . $article['associatedExpedition'][0]['dateEnd'];
 		
-		foreach ($article['images'] as $index => $src) {
-			$imageLocation = '/museum/catalogue/images/' . $src;
-			list ($width, $height, $type, $attr) = getimagesize ($_SERVER['DOCUMENT_ROOT'] . $imageLocation);
-			$article['images'][$index] = array (
-				'title' => $article['title'],
-				'thumbnail' => $imageLocation,
-				'large' => $imageLocation,
-				'dimensions' => $width . 'x' . $height,
-			);
-		}
+		# Attach image metadata
+		$article['images'] = $this->attachImageMetadata ($article['images'], $article['title']);
 		
 		# Format the about text
 		$article['briefDescription'] = application::formatTextBlock ($article['briefDescription']);
@@ -143,6 +135,27 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		
 		# Show the HTML
 		echo $html;
+	}
+	
+	
+	# Function to attach image metadata
+	#!# Move into API
+	private function attachImageMetadata ($images, $title)
+	{
+		foreach ($images as $index => $src) {
+			$imageLocation = '/museum/catalogue/images/' . $src;
+			list ($width, $height, $type, $attr) = getimagesize ($_SERVER['DOCUMENT_ROOT'] . $imageLocation);
+			$images[$index] = array (
+				#!# Hard-coded title - should ideally come from MODES
+				'title' => $title,
+				'thumbnail' => $imageLocation,
+				'large' => $imageLocation,
+				'dimensions' => $width . 'x' . $height,
+			);
+		}
+		
+		# Return the data
+		return $images;
 	}
 	
 	
