@@ -88,15 +88,16 @@
 </header>
 
 <div class="grid">
-{foreach from=$treasures item=treasure}
+{foreach from=$articles item=article}
   <div class="u-1/3 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
-    <a class="image-cta" href="{$treasure.link}">
-      <img src="{$treasure.thumbnail}" alt="{$Treasure.title}">
+    <a class="image-cta" href="{$article.link}">
+      <img src="{($article.images) ? $article.images.0.thumbnail : "$baseUrl/images/treasures/object.jpg"}" alt="{$article.title}">
       <div class="image-cta__caption">View treasure</div>
     </a>
   </div>
 {/foreach}
 </div>
+
 
 
 <header class="section-headings">

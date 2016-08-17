@@ -91,6 +91,33 @@ class shackletonOnline extends frontControllerApplication
 	}
 	
 	
+	# Articles index
+	public function articles ()
+	{
+		# Get the data from the API
+#!# Lower-case inconsistency
+		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii' . '&baseUrlArticles=' . $this->baseUrl . '/articles';
+$apiUrl .= '&includesuppressed=1';
+		
+		$result = file_get_contents ($apiUrl);
+		$data = json_decode ($result, true);
+		
+		# Attach image metadata
+		foreach ($data['articles'] as $id => $article) {
+			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['images'], $article['title']);
+		}
+		
+		# Pass the data into the template
+		$this->template['articles'] = $data['articles'];
+		
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
+	}
+	
+	
 	# Article
 	public function article ($id)
 	{
