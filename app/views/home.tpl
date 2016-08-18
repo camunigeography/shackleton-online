@@ -83,7 +83,7 @@
 
 
 <header class="section-headings">
-  <h2>Treasures from the SPRI collection</h2>
+  <h2><a href="{$baseUrl}/articles/">Treasures from the SPRI collection</a></h2>
   <h3>Delve into some of the unique items from our historic collection of papers, objects and images</h3>
 </header>
 
