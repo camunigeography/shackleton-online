@@ -61,12 +61,12 @@ class shackletonOnline extends frontControllerApplication
 			'expedition' => array (
 				'description' => false,
 				'url' => 'expedition/',
-				'tab' => 'expedition',
+				'tab' => 'Expedition',
 			),
 			'search' => array (
-				'description' => 'Search',
+				'description' => 'Search Shackleton Online',
 				'url' => 'search/',
-				'tab' => 'Search',
+				'tab' => 'Search Shackleton Online',
 			),
 		);
 		
@@ -84,6 +84,12 @@ class shackletonOnline extends frontControllerApplication
 		
 		# Pass the baseUrl to the template
 		$this->template['baseUrl'] = $this->baseUrl;
+		
+		# Specify search scope for the form; see: http://www.ucs.cam.ac.uk/web-search/search-forms
+		$this->searchInclude = $_SERVER['_SITE_URL'] . $this->baseUrl . '/';
+		$this->template['searchInclude'] = $this->searchInclude;
+		$this->searchFilterTitle = 'Search Shackleton Online';
+		$this->template['searchFilterTitle'] = $this->searchFilterTitle;
 		
 	}
 	
@@ -373,9 +379,10 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	# Search
 	public function search ()
 	{
-		
-		$html = 'search plugin';
-		
+		# Create a search instance
+		require_once ('camUniSearch.php');
+		$camUniSearch = new camUniSearch (false, 'searchform', $echoHtml = false, 'query', $this->searchInclude, $this->searchFilterTitle);
+		$html = $camUniSearch->getHtml ();
 		
 		# Pass the data into the template
 		$this->template['html'] = $html;
