@@ -223,6 +223,33 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	}
 	
 	
+	# Biographies
+	public function biographies ()
+	{
+		# Get the data from the API
+		$apiUrl = $this->settings['apiBaseUrl'] . '/biographies' . '?collection=VSII&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
+		$result = file_get_contents ($apiUrl);
+		$people = json_decode ($result, true);
+		// application::dumpData ($people);
+		
+		# End if error
+		if ($people['error']) {
+			$html = $this->page404 ();
+			echo $html;
+			return;
+		}
+		
+		# Pass the data into the template
+		$this->template['people'] = $people;
+		
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
+	}
+	
+	
 	# Expedition
 	public function expedition ($id)
 	{
