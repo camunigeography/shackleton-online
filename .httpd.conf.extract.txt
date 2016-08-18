@@ -25,7 +25,7 @@
 	RewriteRule ^$applicationBaseUrl/(article|biography|expedition)$ $applicationBaseUrl/$1/ [R]
 	
 	# Index pages
-	RewriteRule ^$applicationBaseUrl/(biographies|expeditions|articles)/$ $applicationBaseUrl/index.html?action=$1 [L,QSA]
+	RewriteRule ^$applicationBaseUrl/(biographies|expeditions|articles|search)/$ $applicationBaseUrl/index.html?action=$1 [L,QSA]
 	
 	# Article pages
 	RewriteRule ^$applicationBaseUrl/biographies/([^/]+)/$ $applicationBaseUrl/index.html?action=biography&item=$1 [L,QSA]
@@ -33,7 +33,7 @@
 	RewriteRule ^$applicationBaseUrl/articles/([^/]+)/$ $applicationBaseUrl/index.html?action=article&item=$1 [L,QSA]
 	
 	# Trailing slash support
-	RewriteRule ^$applicationBaseUrl/(biographies|expeditions|articles)$ $applicationBaseUrl/$1/ [R]
+	RewriteRule ^$applicationBaseUrl/(biographies|expeditions|articles|search)$ $applicationBaseUrl/$1/ [R]
 	RewriteRule ^$applicationBaseUrl/(biographies|expeditions|articles)/([^/]+)$ $applicationBaseUrl/$1/$2/ [R]
 	
 </Macro>
