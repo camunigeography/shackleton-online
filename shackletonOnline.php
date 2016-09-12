@@ -228,8 +228,7 @@ $apiUrl .= '&includesuppressed=1';
 		
 		# End if no such record
 		if ($article['error']) {
-			$html = $this->page404 ();
-			echo $html;
+			$this->page404 ();
 			return;
 		}
 		
@@ -295,8 +294,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		
 		# End if no such record
 		if ($person['error']) {
-			$html = $this->page404 ();
-			echo $html;
+			$this->page404 ();
 			return;
 		}
 		
@@ -325,8 +323,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		
 		# End if error
 		if ($people['error']) {
-			$html = $this->page404 ();
-			echo $html;
+			$this->page404 ();
 			return;
 		}
 		
@@ -357,8 +354,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		
 		# End if no such record
 		if ($expedition['error']) {
-			$html = $this->page404 ();
-			echo $html;
+			$this->page404 ();
 			return;
 		}
 		
