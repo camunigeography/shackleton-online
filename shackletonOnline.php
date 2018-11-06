@@ -16,6 +16,7 @@ class shackletonOnline extends frontControllerApplication
 			'useTemplating' => true,
 			'apiBaseUrl' => NULL,
 			'itemCaseSensitive' => true,
+			'form' => false,	// No point loading forms as not used
 		);
 		
 		# Return the defaults
