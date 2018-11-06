@@ -242,8 +242,9 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		# Attach image metadata
 		$article['images'] = $this->attachImageMetadata ($article['images'], $article['title']);
 		
-		# Format the about text
+		# Format the main texts
 		$article['briefDescription'] = application::formatTextBlock ($article['briefDescription']);
+		$article['fullDescription'] = application::formatTextBlock ($article['fullDescription']);
 		
 		# Pass the data into the template
 		$this->template['article'] = $article;

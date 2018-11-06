@@ -20,6 +20,9 @@
 
 {$article.briefDescription}
 
+<p class="comment">Physical description:</p>
+{$article.fullDescription}
+
 <div id="photoGallery" class="gallery">
   <div class="grid">
   {foreach from=$article.images item=image}
