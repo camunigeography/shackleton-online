@@ -126,7 +126,7 @@
 	<h2><a href="{$baseUrl}/videos/">Films</a></h2>
 </header>
 
-<p>Learn more about Shackleton, the expeditions he went on, and his relationships with the people around him through these <a href="{$baseUrl}/videos/">short films</a> about objects voted for by the public.</p>
+<p>In these <a href="{$baseUrl}/videos/"><strong>short films</strong></a> about objects voted for by the public, you can learn more about Shackleton, the expeditions he went on, and his relationships with the people around him.</p>
 
 <br />
 <hr />
