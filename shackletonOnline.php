@@ -368,6 +368,9 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		# Format the about text
 		$expedition['about'] = application::formatTextBlock ($expedition['about']);
 		
+		# Add banner image path
+		$expedition['banner'] = $this->baseUrl  . '/images/expeditions/' . $id . '.jpg';
+		
 		# Pass the data into the template
 		$this->template['expedition'] = $expedition;
 		
