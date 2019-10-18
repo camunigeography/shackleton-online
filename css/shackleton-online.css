@@ -332,7 +332,8 @@ blockquote {
     box-sizing: border-box;
     height: 44px; }
   .collection-search-form input {
-    width: 100%;
+  	float: right;
+    width: 325px;
     padding: 0 10px;
     border: 1px #efefef solid;
     border-right: 0; }
