@@ -157,18 +157,21 @@
 
 
 <header class="section-headings">
-  <h3>Shackleton Online has kindly been funded by the Heritage Lottery Fund, The Gladys Krieble Delmas Foundation and the Esme&eacute; Fairbairn Collections Fund</h3>
+  <h3>Shackleton Online has kindly been funded by the Heritage Lottery Fund, The Gladys Krieble Delmas Foundation, the Esm&eacute;e Fairbairn Collections Fund and the UK Antarctic Heritage Trust.</h3>
 </header>
 
 <div class="grid grid--small grid--middle">
-  <div class="u-1/3 grid__cell">
+  <div class="u-1/4 grid__cell">
     <img src="{$baseUrl}/images/hlf-logo.png" alt="Heritage Lottery Fund logo" style="display: block; margin: 0 auto;">
   </div>
-  <div class="u-1/3 grid__cell">
+  <div class="u-1/4 grid__cell">
     <img src="{$baseUrl}/images/gkdf-logo.png" alt="The Gladys Krieble Delmas Foundation logo" style="display: block; margin: 0 auto;">
   </div>
-  <div class="u-1/3 grid__cell">
+  <div class="u-1/4 grid__cell">
     <img src="{$baseUrl}/images/efcf-logo.png" alt="Esmee Fairbairn Collections Fund logo" style="display: block; margin: 0 auto;">
+  </div>
+  <div class="u-1/4 grid__cell">
+    <img src="{$baseUrl}/images/ukaht-logo.png" alt="UK Antarctic Heritage Trust logo" style="display: block; margin: 0 auto;">
   </div>
 </div>
 
