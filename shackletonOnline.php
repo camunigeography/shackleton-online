@@ -224,6 +224,7 @@ $apiUrl .= '&includesuppressed=1';
 		}
 		
 		$id = str_replace ('_', ' ', $id);
+		$id = str_replace ('.', '/', $id);
 		
 		# Get the data from the API
 		$apiUrl = $this->settings['apiBaseUrl'] . '/article?id=' . urlencode ($id) . '&collection=VSII' . '&baseUrlPeople=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
