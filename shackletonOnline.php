@@ -251,6 +251,17 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$article['briefDescription'] = application::formatTextBlock ($article['briefDescription']);
 		$article['fullDescription'] = application::formatTextBlock ($article['fullDescription']);
 		
+		# Format the dimensions
+		$dimensionsList = array ();
+		foreach ($article['dimensions'] as $dimensions) {
+			$itemDimensions = array ();
+			foreach ($dimensions as $label => $dimension) {
+				$itemDimensions[] = "{$dimension} ({$label})";
+			}
+			$dimensionsList[] = implode (', ', $itemDimensions);
+		}
+		$article['dimensions'] = implode ('; ', $dimensionsList);
+		
 		# Pass the data into the template
 		$this->template['article'] = $article;
 		

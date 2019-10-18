@@ -11,6 +11,7 @@
     <strong>Expedition:</strong> <a href="{$article.expeditionLink}">{$article.expedition}</a>
     <!--<br><strong>Author:</strong> {$article.author}-->
     <br><strong>Materials:</strong> {(($article.materials) ? implode (', ', $article.materials) : '<em class="comment">Unknown</em>')}
+    <br><strong>Dimensions:</strong> {$article.dimensions}
   </div>
   <div class="u-1/3--portrait-tab-and-up grid__cell">
     <strong>Date:</strong> {$article.date}
