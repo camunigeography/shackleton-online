@@ -17,7 +17,7 @@
   <div class="u-1/3 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
     <a class="image-cta" href="{$article.link}">
       <img src="{($article.images) ? $article.images.0.thumbnail : "$baseUrl/images/treasures/object.jpg"}" alt="{$article.title}">
-      <div class="image-cta__caption">View treasure</div>
+      <div class="image-cta__caption">{$article.title|htmlspecialchars}</div>
     </a>
   </div>
 {/foreach}
