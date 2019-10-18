@@ -119,6 +119,42 @@
 {/foreach}
 </div>
 
+<br />
+<hr />
+
+<header class="section-headings">
+	<h2><a href="{$baseUrl}/videos/">Films</a></h2>
+</header>
+
+<p>Learn more about Shackleton, the expeditions he went on, and his relationships with the people around him through these <a href="{$baseUrl}/videos/">short films</a> about objects voted for by the public.</p>
+
+<br />
+<hr />
+
+
+
+<header class="section-headings">
+	<h2>Audio-described objects</h2>
+</header>
+
+<p>Listen to these accessible audio descriptions of 10 objects in our Shackleton collection and find out more about what Shackleton and his men would have taken to the Antarctic.</p>
+
+<br />
+<hr />
+
+
+<header class="section-headings">
+	<h2><a href="https://www.spri.cam.ac.uk/museum/resources/">Learning resources</a></h2>
+</header>
+
+<p>Our website has <a href="https://www.spri.cam.ac.uk/museum/resources/">educational films and teacher packs</a> about Antarctica. Explore our educational film and teacher pack about Ernest Shackleton and the Endurance, aimed at 7-11 year olds!</p>
+
+<br />
+<hr />
+
+
+
+
 
 <header class="section-headings">
   <h3>Shackleton Online has kindly been funded by the Heritage Lottery Fund, The Gladys Krieble Delmas Foundation and the Esme&eacute; Fairbairn Collections Fund</h3>
