@@ -7,6 +7,7 @@
 <h1>Videos</h1>
 
 
+<p>In these short films about objects voted for by the public, you can learn more about Shackleton, the expeditions he went on, and his relationships with the people around him.</p>
 
 <h2>Endurance Expedition chronometer</h2>
 

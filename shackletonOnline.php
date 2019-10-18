@@ -69,6 +69,11 @@ class shackletonOnline extends frontControllerApplication
 				'url' => 'videos/',
 				'tab' => 'Videos',
 			),
+			'audio' => array (
+				'description' => false,
+				'url' => 'audio/',
+				'tab' => 'Audio',
+			),
 			'search' => array (
 				'description' => 'Search Shackleton Online',
 				'url' => 'search/',
@@ -396,6 +401,17 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	
 	# Videos
 	public function videos ()
+	{
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
+	}
+	
+	
+	# Audio
+	public function audio ()
 	{
 		# Process the template
 		$html = $this->templatise ();

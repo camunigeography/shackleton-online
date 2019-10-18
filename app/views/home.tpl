@@ -134,10 +134,10 @@
 
 
 <header class="section-headings">
-	<h2>Audio-described objects</h2>
+	<h2><a href="{$baseUrl}/audio/">Audio-described objects</a></h2>
 </header>
 
-<p>Listen to these accessible audio descriptions of 10 objects in our Shackleton collection and find out more about what Shackleton and his men would have taken to the Antarctic.</p>
+<p>Listen to these accessible <a href="{$baseUrl}/audio/">audio descriptions</a> of ten objects in our Shackleton collection and find out more about what Shackleton and his men would have taken to the Antarctic.</p>
 
 <br />
 <hr />

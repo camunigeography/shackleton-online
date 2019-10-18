@@ -1,0 +1,12 @@
+-rwxrw-r-- 1 mvl22 mvl22  1492224 Oct 18 17:58 Boot N 88a.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1136256 Oct 18 17:59 Crampons N 102a-b.mp3*
+-rwxrw-r-- 1 mvl22 mvl22   992256 Oct 18 17:59 Dipper N 170.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1401984 Oct 18 17:59 Eye Shades N 1122.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1239936 Oct 18 17:59 Goggles Y 2003.1.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1368192 Oct 18 17:59 Hood Y 2010.24.mp3*
+-rwxrw-r-- 1 mvl22 mvl22 10187904 Oct 18 18:03 Intro - V2 - The Polar Museum - AD - Wed 10-07-2019 - V2.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1886592 Oct 18 17:59 Medal Y 74.1.1.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1280256 Oct 18 17:59 Pony Snowshoe N 24a.mp3*
+-rw-rw-r-- 1 mvl22 mvl22        0 Oct 18 18:29 README.txt
+-rwxrw-r-- 1 mvl22 mvl22  1731072 Oct 18 17:59 Sledge, model Y 2010.62a-b.mp3*
+-rwxrw-r-- 1 mvl22 mvl22  1267968 Oct 18 17:59 Watch N 1054.mp3*
