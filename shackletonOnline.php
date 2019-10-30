@@ -177,7 +177,7 @@ $apiUrl .= '&includesuppressed=1';
 		
 		# Get the data from the API
 		$forceId = 'Shackleton, Ernest Henry';
-		$apiUrl = $this->settings['apiBaseUrl'] . '/biographies' . '?collection=VSII&random=5&forceid=' . urlencode ($forceId) . '&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/biographies' . '?collection=VSII&random=5&forceid=' . urlencode ($forceId) . '&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions' . '&imagesize=300';
 		$result = file_get_contents ($apiUrl);
 		$people = json_decode ($result, true);
 		// application::dumpData ($people);
@@ -311,7 +311,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$id = str_replace ('_', ' ', $id);
 		
 		# Get the data from the API
-		$apiUrl = $this->settings['apiBaseUrl'] . '/biography?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/biography?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions' . '&imagesize=400';
 		$result = file_get_contents ($apiUrl);
 		$person = json_decode ($result, true);
 		// application::dumpData ($person);
@@ -340,7 +340,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	public function biographies ()
 	{
 		# Get the data from the API
-		$apiUrl = $this->settings['apiBaseUrl'] . '/biographies' . '?collection=VSII&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/biographies' . '?collection=VSII&baseUrl=' . $this->baseUrl . '/biographies' . '&baseUrlExpeditions=' . $this->baseUrl . '/expeditions' . '&imagesize=300';
 		$result = file_get_contents ($apiUrl);
 		$people = json_decode ($result, true);
 		// application::dumpData ($people);
