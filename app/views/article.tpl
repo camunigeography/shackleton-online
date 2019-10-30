@@ -27,6 +27,15 @@
 <p class="comment">Physical description:</p>
 {$article.fullDescription}
 
+
+{if ($article.id == 'N: 999a')}
+	{include file='_video_chronometer.tpl'}
+{/if}
+{if ($article.id == 'Y: 2002/2/4')}
+	{include file='_video_flag.tpl'}
+{/if}
+
+
 <div id="photoGallery" class="gallery">
   <div class="grid">
   {foreach from=$article.images item=image}

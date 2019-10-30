@@ -24,6 +24,20 @@
 
 {$expedition.about}
 
+
+{if ($expedition.id == 'endurance')}
+	{include file='_video_chronometer.tpl'}
+{/if}
+
+{if ($expedition.id == 'nimrod')}
+	{include file='_video_flag.tpl'}
+{/if}
+
+{if ($expedition.id == 'discovery')}
+	{include file='_video_goggles.tpl'}
+{/if}
+
+
 <header class="section-headings">
   <h3>Personnel</h3>
 </header>

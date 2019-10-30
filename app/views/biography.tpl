@@ -19,6 +19,10 @@
 {$person.about}
 
 
+{if ($person.id == 'Worsley,_Frank_Arthur')}
+	{include file='_video_chronometer.tpl'}
+{/if}
+
 <br>
 
 <header class="section-headings">
