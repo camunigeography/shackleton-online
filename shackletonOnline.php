@@ -109,51 +109,8 @@ class shackletonOnline extends frontControllerApplication
 	# Home
 	public function home ()
 	{
-		// Expeditions
-		$this->template['expeditions'] = 
-		  array(
-		    array(
-		      'title' => 'Discovery',
-		      'name' => 'British National Antarctic Expedition',
-		      'leader' => 'Robert Falcon Scott',
-		      'date' => '1901-1904',
-		      'bg' => $this->baseUrl . '/images/teasers/12.jpg',
-		      'link' => $this->baseUrl . '/expeditions/discovery/',
-		    ),
-		    array(
-		      'title' => 'Nimrod',
-		      'name' => 'British Antarctic Expedition',
-		      'leader' => 'Ernest Shackleton',
-		      'date' => '1907-1909',
-		      'bg' => $this->baseUrl . '/images/teasers/15.jpg',
-		      'link' => $this->baseUrl . '/expeditions/nimrod/',
-		    ),
-		    array(
-		      'title' => 'Endurance',
-		      'name' => 'Imperial Trans-Antarctic Expedition',
-		      'leader' => 'Ernest Shackleton',
-		      'date' => '1914-1916',
-		      'bg' => $this->baseUrl . '/images/teasers/10.jpg',
-		      'link' => $this->baseUrl . '/expeditions/endurance/',
-		    ),
-		    array(
-		      'title' => 'Aurora',
-		      'name' => 'Imperial Trans-Antarctic Expedition',
-		      'leader' => 'Captain Aeneas Mackintosh',
-		      'date' => '1914-1917',
-		      'bg' => $this->baseUrl . '/images/teasers/20.jpg',
-		      'link' => $this->baseUrl . '/expeditions/aurora/',
-		    ),
-		    array(
-		      'title' => 'Quest',
-		      'name' => 'Shackleton Rowett Expedition',
-		      'leader' => 'Ernest Shackleton (Frank Wild)',
-		      'date' => '1921-1922',
-		      'bg' => $this->baseUrl . '/images/teasers/18.jpg',
-		      'link' => $this->baseUrl . '/expeditions/quest/',
-		    ),
-		  );
-		
+		# Expeditions
+		$this->template['expeditions'] = $this->getExpeditions ();
 		
 		# Articles:
 		
@@ -362,14 +319,72 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	}
 	
 	
+	# Expeditions
+	public function expeditions ()
+	{
+		# Expeditions
+		$this->template['expeditions'] = $this->getExpeditions ();
+		
+		# Process the template
+		$html = $this->templatise ();
+		
+		# Show the HTML
+		echo $html;
+	}
+	
+	
+	# Expeditions
+	private function getExpeditions ()
+	{
+		// Expeditions
+		return
+		  array(
+		    array(
+		      'title' => 'Discovery',
+		      'name' => 'British National Antarctic Expedition',
+		      'leader' => 'Robert Falcon Scott',
+		      'date' => '1901-1904',
+		      'bg' => $this->baseUrl . '/images/teasers/12.jpg',
+		      'link' => $this->baseUrl . '/expeditions/discovery/',
+		    ),
+		    array(
+		      'title' => 'Nimrod',
+		      'name' => 'British Antarctic Expedition',
+		      'leader' => 'Ernest Shackleton',
+		      'date' => '1907-1909',
+		      'bg' => $this->baseUrl . '/images/teasers/15.jpg',
+		      'link' => $this->baseUrl . '/expeditions/nimrod/',
+		    ),
+		    array(
+		      'title' => 'Endurance',
+		      'name' => 'Imperial Trans-Antarctic Expedition',
+		      'leader' => 'Ernest Shackleton',
+		      'date' => '1914-1916',
+		      'bg' => $this->baseUrl . '/images/teasers/10.jpg',
+		      'link' => $this->baseUrl . '/expeditions/endurance/',
+		    ),
+		    array(
+		      'title' => 'Aurora',
+		      'name' => 'Imperial Trans-Antarctic Expedition',
+		      'leader' => 'Captain Aeneas Mackintosh',
+		      'date' => '1914-1917',
+		      'bg' => $this->baseUrl . '/images/teasers/20.jpg',
+		      'link' => $this->baseUrl . '/expeditions/aurora/',
+		    ),
+		    array(
+		      'title' => 'Quest',
+		      'name' => 'Shackleton Rowett Expedition',
+		      'leader' => 'Ernest Shackleton (Frank Wild)',
+		      'date' => '1921-1922',
+		      'bg' => $this->baseUrl . '/images/teasers/18.jpg',
+		      'link' => $this->baseUrl . '/expeditions/quest/',
+		    ),
+		  );
+	}
+	
 	# Expedition
 	public function expedition ($id)
 	{
-		if (!$id) {
-			require_once ('expedition.php');
-			return;
-		}
-		
 		# Get the data from the API
 		$apiUrl = $this->settings['apiBaseUrl'] . '/expedition?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '&baseUrlPeople=' . $this->baseUrl . '/biographies';
 		$result = file_get_contents ($apiUrl);
