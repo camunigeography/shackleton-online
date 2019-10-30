@@ -6,6 +6,8 @@
 
 <h1>Audio</h1>
 
+<p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; Audio-described objects</p>
+
 <p>Listen to these accessible audio descriptions of ten objects in our Shackleton collection and find out more about what Shackleton and his men would have taken to the Antarctic.</p>
 
 

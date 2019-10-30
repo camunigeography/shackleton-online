@@ -6,6 +6,9 @@
 
 <h1>{$article.title}</h1>
 
+<p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; <a href="{$baseUrl}/articles/">Treasures from the SPRI collection</a> &raquo; Article</p>
+
+
 <div class="grid  mb">
   <div class="u-2/3--portrait-tab-and-up grid__cell">
     <strong>Expedition:</strong> <a href="{$article.expeditionLink}">{$article.expedition}</a>

@@ -6,6 +6,8 @@
 
 <h1>Biographies</h1>
 
+<p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; Meet the pioneers</p>
+
 <header class="section-headings">
   <h2>Meet the pioneers</h2>
   <h3>Discover the lives and stories of Shackleton's intrepid companions</h3>

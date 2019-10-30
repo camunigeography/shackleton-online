@@ -6,6 +6,8 @@
 
 <h1>Articles</h1>
 
+<p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; Treasures from the SPRI collection</p>
+
 <header class="section-headings">
   <h2>Treasures from the SPRI collection</h2>
   <h3>Delve into some of the unique items from our historic collection of papers, objects and images</h3>

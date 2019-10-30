@@ -6,6 +6,8 @@
 
 <h1>{$person.name}</h1>
 
+<p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; <a href="{$baseUrl}/biographies/">Meet the pioneers</a> &raquo; Biography</p>
+
 <img class="biography-portrait" src="{($person.image) ? $person.image : "$baseUrl/images/pioneers/person-large.jpg"}" alt="{$person.name}">
 
 <p><strong>Alias:</strong> {(($person.alias) ? $person.alias : '<em class="comment">None</em>')}</p>
