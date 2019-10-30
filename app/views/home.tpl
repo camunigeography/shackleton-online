@@ -9,7 +9,6 @@
 {include file='search-form.tpl'}
 
 <header class="section-headings">
-  <h2>Welcome to Shackleton Online</h2>
   <h3>Explore our exceptional collection of material related to Sir Ernest Shackleton</h3>
 </header>
 
