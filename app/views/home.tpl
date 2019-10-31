@@ -12,7 +12,7 @@
   <h3>Explore our exceptional collection of material related to Sir Ernest Shackleton</h3>
 </header>
 
-<p>Sir Ernest Shackleton (1874-1922) led three expeditions to the Antarctic during the ‘Heroic Age’ of Antarctic exploration. He was an impressive leader, known for his bravery and ability to build camaraderie in his crews.</p>
+<p>Sir Ernest Shackleton (1874-1922) participated in four expeditions to the Antarctic during the 'Heroic Age' of Antarctic exploration, leading three of them. He was an impressive leader, known for his bravery and ability to build camaraderie in his crews.</p>
 <p>The Shackleton Online resource is a space where you can find out more about Shackleton’s expeditions, crew mates, the places they travelled to, and the exceptional collections of papers, photographs and objects related to Shackleton held by the Scott Polar Research Institute.</p>
 
 <br><hr>
