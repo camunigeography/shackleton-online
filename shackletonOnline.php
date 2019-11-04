@@ -333,7 +333,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'name' => 'British National Antarctic Expedition',
 		      'leader' => 'Robert Falcon Scott',
 		      'date' => '1901-1904',
-		      'bg' => $this->baseUrl . '/images/teasers/12.jpg',
+		      'teaserImage' => $this->baseUrl . '/images/teasers/12.jpg',
 		      'link' => $this->baseUrl . '/expeditions/discovery/',
 		    ),
 		    'nimrod' => array(
@@ -341,7 +341,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'name' => 'British Antarctic Expedition',
 		      'leader' => 'Ernest Shackleton',
 		      'date' => '1907-1909',
-		      'bg' => $this->baseUrl . '/images/teasers/15.jpg',
+		      'teaserImage' => $this->baseUrl . '/images/teasers/15.jpg',
 		      'link' => $this->baseUrl . '/expeditions/nimrod/',
 		    ),
 		    'endurance' => array(
@@ -349,7 +349,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'name' => 'Imperial Trans-Antarctic Expedition',
 		      'leader' => 'Ernest Shackleton',
 		      'date' => '1914-1916',
-		      'bg' => $this->baseUrl . '/images/teasers/10.jpg',
+		      'teaserImage' => $this->baseUrl . '/images/teasers/10.jpg',
 		      'link' => $this->baseUrl . '/expeditions/endurance/',
 		    ),
 		    'aurora' => array(
@@ -357,7 +357,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'name' => 'Imperial Trans-Antarctic Expedition',
 		      'leader' => 'Captain Aeneas Mackintosh',
 		      'date' => '1914-1917',
-		      'bg' => $this->baseUrl . '/images/teasers/20.jpg',
+		      'teaserImage' => $this->baseUrl . '/images/teasers/20.jpg',
 		      'link' => $this->baseUrl . '/expeditions/aurora/',
 		    ),
 		    'quest' => array(
@@ -365,7 +365,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'name' => 'Shackleton Rowett Expedition',
 		      'leader' => 'Ernest Shackleton (Frank Wild)',
 		      'date' => '1921-1922',
-		      'bg' => $this->baseUrl . '/images/teasers/18.jpg',
+		      'teaserImage' => $this->baseUrl . '/images/teasers/18.jpg',
 		      'link' => $this->baseUrl . '/expeditions/quest/',
 		    ),
 		  );
