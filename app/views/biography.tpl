@@ -33,7 +33,7 @@
 {foreach from=$person.expeditions item=expedition}
   <div class="u-1/2 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
     <a class="mini-teaser" href="{$expedition.link}">
-      <img src="{($expedition.image) ? $expedition.image : "$baseUrl/images/expeditions/expedition.jpg"}" alt="{$expedition.title}">
+      <img src="{($expedition.squareImage) ? $expedition.squareImage : "$baseUrl/images/expeditions/expedition.jpg"}" alt="{$expedition.title}">
       <div class="mini-teaser__caption">
         <strong>{$expedition.title}</strong>
         <br>{$expedition.date}

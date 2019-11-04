@@ -272,6 +272,13 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		# Format the about text
 		$person['about'] = application::formatTextBlock ($person['about']);
 		
+		# Add images into the expeditions
+		foreach ($person['expeditions'] as $index => $expedition) {
+			preg_match ('|^/museum/shackleton/expeditions/([^/]+)/$|', $expedition['link'], $matches);
+			$expeditionId = $matches[1];
+			$person['expeditions'][$index]['squareImage'] = $supportedExpeditions[$expeditionId]['squareImage'];
+		}
+		
 		# Pass the data into the template
 		$this->template['person'] = $person;
 		
@@ -335,6 +342,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'date' => '1901-1904',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/12.jpg',
 			  'bannerImage' => $this->baseUrl . '/images/expeditions/discovery.jpg',
+			  'squareImage' => $this->baseUrl . '/images/expeditions/discovery-square.jpg',
 		      'link' => $this->baseUrl . '/expeditions/discovery/',
 		    ),
 		    'nimrod' => array(
@@ -344,6 +352,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'date' => '1907-1909',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/15.jpg',
 			  'bannerImage' => $this->baseUrl . '/images/expeditions/nimrod.jpg',
+			  'squareImage' => $this->baseUrl . '/images/expeditions/nimrod-square.jpg',
 		      'link' => $this->baseUrl . '/expeditions/nimrod/',
 		    ),
 		    'endurance' => array(
@@ -353,6 +362,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'date' => '1914-1916',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/10.jpg',
 			  'bannerImage' => $this->baseUrl . '/images/expeditions/endurance.jpg',
+		      'squareImage' => $this->baseUrl . '/images/expeditions/endurance-square.jpg',
 		      'link' => $this->baseUrl . '/expeditions/endurance/',
 		    ),
 		    'aurora' => array(
@@ -362,6 +372,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'date' => '1914-1917',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/20.jpg',
 			  'bannerImage' => $this->baseUrl . '/images/expeditions/aurora.jpg',
+		      'squareImage' => $this->baseUrl . '/images/expeditions/aurora-square.jpg',
 		      'link' => $this->baseUrl . '/expeditions/aurora/',
 		    ),
 		    'quest' => array(
@@ -371,6 +382,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'date' => '1921-1922',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/18.jpg',
 			  'bannerImage' => $this->baseUrl . '/images/expeditions/quest.jpg',
+		      'squareImage' => $this->baseUrl . '/images/expeditions/quest-square.jpg',
 		      'link' => $this->baseUrl . '/expeditions/quest/',
 		    ),
 		  );
