@@ -272,6 +272,17 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		# Format the about text
 		$person['about'] = application::formatTextBlock ($person['about']);
 		
+		# Do not show other unsupported expeditions present in the API data, e.g. on /museum/shackleton/biographies/England,_Rupert_George_A./
+		#!# This should be moved up into the API level
+		$supportedExpeditions = $this->getExpeditions ();
+		foreach ($person['expeditions'] as $index => $expedition) {
+			preg_match ('|^/museum/shackleton/expeditions/([^/]+)/$|', $expedition['link'], $matches);
+			$expeditionId = $matches[1];
+			if (!isSet ($supportedExpeditions[$expeditionId])) {
+				unset ($person['expeditions'][$index]);
+			}
+		}
+		
 		# Add images into the expeditions
 		foreach ($person['expeditions'] as $index => $expedition) {
 			preg_match ('|^/museum/shackleton/expeditions/([^/]+)/$|', $expedition['link'], $matches);
