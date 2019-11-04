@@ -12,7 +12,6 @@
 <div class="grid  mb">
   <div class="u-2/3--portrait-tab-and-up grid__cell">
     <strong>Expedition:</strong> <a href="{$article.expeditionLink}">{$article.expedition}</a>
-    <!--<br><strong>Author:</strong> {$article.author}-->
     <br><strong>Materials:</strong> {(($article.materials) ? implode (', ', $article.materials) : '<em class="comment">Unknown</em>')}
     <br><strong>Dimensions:</strong> {$article.dimensions}
   </div>
