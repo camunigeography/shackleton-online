@@ -180,11 +180,6 @@ $apiUrl .= '&includesuppressed=1';
 	# Article
 	public function article ($id)
 	{
-		if (!$id) {
-			require_once ('article.php');
-			return;
-		}
-		
 		$id = str_replace ('_', ' ', $id);
 		$id = str_replace ('.', '/', $id);
 		
@@ -260,11 +255,6 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	# Biography
 	public function biography ($id)
 	{
-		if (!$id) {
-			require_once ('biography.php');
-			return;
-		}
-		
 		$id = str_replace ('_', ' ', $id);
 		
 		# Get the data from the API
