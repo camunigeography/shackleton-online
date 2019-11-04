@@ -66,6 +66,19 @@
 
 <p>In these <a href="{$baseUrl}/videos/">short films</a> about objects voted for by the public, you can learn more about Shackleton, the expeditions he went on, and his relationships with the people around him.</p>
 
+<div class="grid grid--small grid--middle">
+	<div class="u-1/3 grid__cell">
+  		<a href="{$baseUrl}/videos/#chronometer"><img src="/museum/shackleton/videos/chronometer.jpg" /></a>
+	</div>
+	<div class="u-1/3 grid__cell">
+  		<a href="{$baseUrl}/videos/#flag"><img src="/museum/shackleton/videos/flag.jpg" /></a>
+	</div>
+	<div class="u-1/3 grid__cell">
+  		<a href="{$baseUrl}/videos/#goggles"><img src="/museum/shackleton/videos/goggles.jpg" /></a>
+	</div>
+</div>
+
+
 <br />
 <hr />
 

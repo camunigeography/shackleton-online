@@ -1,4 +1,4 @@
-	<header class="section-headings">
+	<header class="section-headings" id="goggles">
 		<h3>Discovery Expedition goggles - film</h3>
 	</header>
 	<video width="854" height="480" controls="controls" poster="{$baseUrl}/videos/goggles.jpg">
