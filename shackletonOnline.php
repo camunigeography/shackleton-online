@@ -334,6 +334,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'leader' => 'Robert Falcon Scott',
 		      'date' => '1901-1904',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/12.jpg',
+			  'bannerImage' => $this->baseUrl . '/images/expeditions/discovery.jpg',
 		      'link' => $this->baseUrl . '/expeditions/discovery/',
 		    ),
 		    'nimrod' => array(
@@ -342,6 +343,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'leader' => 'Ernest Shackleton',
 		      'date' => '1907-1909',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/15.jpg',
+			  'bannerImage' => $this->baseUrl . '/images/expeditions/nimrod.jpg',
 		      'link' => $this->baseUrl . '/expeditions/nimrod/',
 		    ),
 		    'endurance' => array(
@@ -350,6 +352,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'leader' => 'Ernest Shackleton',
 		      'date' => '1914-1916',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/10.jpg',
+			  'bannerImage' => $this->baseUrl . '/images/expeditions/endurance.jpg',
 		      'link' => $this->baseUrl . '/expeditions/endurance/',
 		    ),
 		    'aurora' => array(
@@ -358,6 +361,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'leader' => 'Captain Aeneas Mackintosh',
 		      'date' => '1914-1917',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/20.jpg',
+			  'bannerImage' => $this->baseUrl . '/images/expeditions/aurora.jpg',
 		      'link' => $this->baseUrl . '/expeditions/aurora/',
 		    ),
 		    'quest' => array(
@@ -366,6 +370,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'leader' => 'Ernest Shackleton (Frank Wild)',
 		      'date' => '1921-1922',
 		      'teaserImage' => $this->baseUrl . '/images/teasers/18.jpg',
+			  'bannerImage' => $this->baseUrl . '/images/expeditions/quest.jpg',
 		      'link' => $this->baseUrl . '/expeditions/quest/',
 		    ),
 		  );
@@ -390,7 +395,8 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$expedition['about'] = application::formatTextBlock ($expedition['about']);
 		
 		# Add banner image path
-		$expedition['banner'] = $this->baseUrl  . '/images/expeditions/' . $id . '.jpg';
+		$expeditions = $this->getExpeditions ();
+		$expedition['banner'] = $expeditions[$id]['bannerImage'];
 		
 		# Pass the data into the template
 		$this->template['expedition'] = $expedition;
