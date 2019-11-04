@@ -327,9 +327,8 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	private function getExpeditions ()
 	{
 		// Expeditions
-		return
-		  array(
-		    array(
+		return array (
+		    'discovery' => array(
 		      'title' => 'Discovery',
 		      'name' => 'British National Antarctic Expedition',
 		      'leader' => 'Robert Falcon Scott',
@@ -337,7 +336,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'bg' => $this->baseUrl . '/images/teasers/12.jpg',
 		      'link' => $this->baseUrl . '/expeditions/discovery/',
 		    ),
-		    array(
+		    'nimrod' => array(
 		      'title' => 'Nimrod',
 		      'name' => 'British Antarctic Expedition',
 		      'leader' => 'Ernest Shackleton',
@@ -345,7 +344,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'bg' => $this->baseUrl . '/images/teasers/15.jpg',
 		      'link' => $this->baseUrl . '/expeditions/nimrod/',
 		    ),
-		    array(
+		    'endurance' => array(
 		      'title' => 'Endurance',
 		      'name' => 'Imperial Trans-Antarctic Expedition',
 		      'leader' => 'Ernest Shackleton',
@@ -353,7 +352,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'bg' => $this->baseUrl . '/images/teasers/10.jpg',
 		      'link' => $this->baseUrl . '/expeditions/endurance/',
 		    ),
-		    array(
+		    'aurora' => array(
 		      'title' => 'Aurora',
 		      'name' => 'Imperial Trans-Antarctic Expedition',
 		      'leader' => 'Captain Aeneas Mackintosh',
@@ -361,7 +360,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		      'bg' => $this->baseUrl . '/images/teasers/20.jpg',
 		      'link' => $this->baseUrl . '/expeditions/aurora/',
 		    ),
-		    array(
+		    'quest' => array(
 		      'title' => 'Quest',
 		      'name' => 'Shackleton Rowett Expedition',
 		      'leader' => 'Ernest Shackleton (Frank Wild)',

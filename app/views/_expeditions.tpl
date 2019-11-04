@@ -5,58 +5,58 @@
 
 <div class="grid">
   <div class="u-1/2--portrait-tab-and-up grid__cell">
-    <a class="teaser-box" href="{$expeditions[0].link}">
-      <div class="teaser-box__title">{$expeditions[0].title}</div>
+    <a class="teaser-box" href="{$expeditions.discovery.link}">
+      <div class="teaser-box__title">{$expeditions.discovery.title}</div>
       <div class="teaser-box__body">
-        {$expeditions[0].name}
-        <br>Led by {$expeditions[0].leader}
-        <br>{$expeditions[0].date}
+        {$expeditions.discovery.name}
+        <br>Led by {$expeditions.discovery.leader}
+        <br>{$expeditions.discovery.date}
       </div>
-      <img class="teaser-box__img" src="{$expeditions[0].bg}" alt="{$expeditions[0].name}">
+      <img class="teaser-box__img" src="{$expeditions.discovery.bg}" alt="{$expeditions.discovery.name}">
     </a>
   </div>
   <div class="u-1/2--portrait-tab-and-up grid__cell">
     <a class="teaser-box" href="{$expeditions[1].link}">
-      <div class="teaser-box__title">{$expeditions[1].title}</div>
+      <div class="teaser-box__title">{$expeditions.nimrod.title}</div>
       <div class="teaser-box__body">
-        {$expeditions[1].name}
-        <br>Led by {$expeditions[1].leader}
-        <br>{$expeditions[1].date}
+        {$expeditions.nimrod.name}
+        <br>Led by {$expeditions.nimrod.leader}
+        <br>{$expeditions.nimrod.date}
       </div>
-      <img class="teaser-box__img" src="{$expeditions[1].bg}" alt="{$expeditions[1].name}">
+      <img class="teaser-box__img" src="{$expeditions.nimrod.bg}" alt="{$expeditions.nimrod.name}">
     </a>
   </div>
   <div class="u-1/2--portrait-tab-and-up u-1/3--desktop grid__cell">
     <a class="teaser-box" href="{$expeditions[2].link}">
-      <div class="teaser-box__title">{$expeditions[2].title}</div>
+      <div class="teaser-box__title">{$expeditions.endurance.title}</div>
       <div class="teaser-box__body">
-        {$expeditions[2].name}
-        <br>Led by {$expeditions[2].leader}
-        <br>{$expeditions[2].date}
+        {$expeditions.endurance.name}
+        <br>Led by {$expeditions.endurance.leader}
+        <br>{$expeditions.endurance.date}
       </div>
-      <img class="teaser-box__img" src="{$expeditions[2].bg}" alt="{$expeditions[2].name}">
+      <img class="teaser-box__img" src="{$expeditions.endurance.bg}" alt="{$expeditions.endurance.name}">
     </a>
   </div>
   <div class="u-1/2--portrait-tab-and-up u-1/3--desktop grid__cell">
-    <a class="teaser-box" href="{$expeditions[3].link}">
-      <div class="teaser-box__title">{$expeditions[3].title}</div>
+    <a class="teaser-box" href="{$expeditions.aurora.link}">
+      <div class="teaser-box__title">{$expeditions.aurora.title}</div>
       <div class="teaser-box__body">
-        {$expeditions[3].name}
-        <br>Led by {$expeditions[3].leader}
-        <br>{$expeditions[3].date}
+        {$expeditions.aurora.name}
+        <br>Led by {$expeditions.aurora.leader}
+        <br>{$expeditions.aurora.date}
       </div>
-      <img class="teaser-box__img" src="{$expeditions[3].bg}" alt="{$expeditions[3].name}">
+      <img class="teaser-box__img" src="{$expeditions.aurora.bg}" alt="{$expeditions.aurora.name}">
     </a>
   </div>
   <div class="u-1/2--portrait-tab-and-up u-1/3--desktop grid__cell">
-    <a class="teaser-box" href="{$expeditions[4].link}">
-      <div class="teaser-box__title">{$expeditions[4].title}</div>
+    <a class="teaser-box" href="{$expeditions.quest.link}">
+      <div class="teaser-box__title">{$expeditions.quest.title}</div>
       <div class="teaser-box__body">
-        {$expeditions[4].name}
-        <br>Led by {$expeditions[4].leader}
-        <br>{$expeditions[4].date}
+        {$expeditions.quest.name}
+        <br>Led by {$expeditions.quest.leader}
+        <br>{$expeditions.quest.date}
       </div>
-      <img class="teaser-box__img" src="{$expeditions[4].bg}" alt="{$expeditions[4].name}">
+      <img class="teaser-box__img" src="{$expeditions.quest.bg}" alt="{$expeditions.quest.name}">
     </a>
   </div>
 </div>
