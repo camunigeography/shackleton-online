@@ -191,7 +191,7 @@ $apiUrl .= '&includesuppressed=1';
 		//application::dumpData ($article);
 		
 		# End if no such record
-		if ($article['error']) {
+		if (isSet ($article['error'])) {
 			$this->page404 ();
 			return;
 		}
