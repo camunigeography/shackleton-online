@@ -116,7 +116,7 @@ class shackletonOnline extends frontControllerApplication
 		
 		# Get the data from the API
 #!# Lower-case inconsistency
-		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii&random=10' . '&baseUrlArticles=' . $this->baseUrl . '/articles' . '&imagesize=300';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii&random=10' . '&baseUrlArticles=' . $this->baseUrl . '/articles' . '&imagesize=300square';
 $apiUrl .= '&includesuppressed=1';
 		$result = file_get_contents ($apiUrl);
 		$data = json_decode ($result, true);
@@ -155,7 +155,7 @@ $apiUrl .= '&includesuppressed=1';
 	{
 		# Get the data from the API
 #!# Lower-case inconsistency
-		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii' . '&baseUrlArticles=' . $this->baseUrl . '/articles' . '&imagesize=300';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii' . '&baseUrlArticles=' . $this->baseUrl . '/articles' . '&imagesize=300square';
 $apiUrl .= '&includesuppressed=1';
 		
 		$result = file_get_contents ($apiUrl);
