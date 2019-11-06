@@ -116,7 +116,7 @@ class shackletonOnline extends frontControllerApplication
 		
 		# Get the data from the API
 #!# Lower-case inconsistency
-		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii&random=10' . '&baseUrlArticles=' . $this->baseUrl . '/articles';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii&random=10' . '&baseUrlArticles=' . $this->baseUrl . '/articles' . '&imagesize=300';
 $apiUrl .= '&includesuppressed=1';
 		$result = file_get_contents ($apiUrl);
 		$data = json_decode ($result, true);
@@ -155,7 +155,7 @@ $apiUrl .= '&includesuppressed=1';
 	{
 		# Get the data from the API
 #!# Lower-case inconsistency
-		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii' . '&baseUrlArticles=' . $this->baseUrl . '/articles';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/articles?collection=vsii' . '&baseUrlArticles=' . $this->baseUrl . '/articles' . '&imagesize=300';
 $apiUrl .= '&includesuppressed=1';
 		
 		$result = file_get_contents ($apiUrl);
@@ -397,7 +397,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	public function expedition ($id)
 	{
 		# Get the data from the API
-		$apiUrl = $this->settings['apiBaseUrl'] . '/expedition?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '&baseUrlPeople=' . $this->baseUrl . '/biographies';
+		$apiUrl = $this->settings['apiBaseUrl'] . '/expedition?id=' . urlencode ($id) . '&baseUrl=' . $this->baseUrl . '&baseUrlPeople=' . $this->baseUrl . '/biographies' . '&imagesize=300';
 		$result = file_get_contents ($apiUrl);
 		$expedition = json_decode ($result, true);
 		//application::dumpData ($expedition);
