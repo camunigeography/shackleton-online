@@ -16,7 +16,7 @@
     </a>
   </div>
   <div class="u-1/2--portrait-tab-and-up grid__cell">
-    <a class="teaser-box" href="{$expeditions[1].link}">
+    <a class="teaser-box" href="{$expeditions.nimrod.link}">
       <div class="teaser-box__title">{$expeditions.nimrod.title}</div>
       <div class="teaser-box__body">
         {$expeditions.nimrod.name}
@@ -27,7 +27,7 @@
     </a>
   </div>
   <div class="u-1/2--portrait-tab-and-up u-1/3--desktop grid__cell">
-    <a class="teaser-box" href="{$expeditions[2].link}">
+    <a class="teaser-box" href="{$expeditions.endurance.link}">
       <div class="teaser-box__title">{$expeditions.endurance.title}</div>
       <div class="teaser-box__body">
         {$expeditions.endurance.name}
