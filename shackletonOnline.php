@@ -233,13 +233,12 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	private function attachImageMetadata ($images, $title)
 	{
 		foreach ($images as $index => $src) {
-			$imageLocation = '/museum/catalogue/images/' . $src;
-			list ($width, $height, $type, $attr) = getimagesize ($_SERVER['DOCUMENT_ROOT'] . $imageLocation);
+			list ($width, $height, $type, $attr) = getimagesize ($_SERVER['DOCUMENT_ROOT'] . $src);
 			$images[$index] = array (
 				#!# Hard-coded title - should ideally come from MODES
 				'title' => $title,
-				'thumbnail' => $imageLocation,
-				'large' => $imageLocation,
+				'thumbnail' => $src,
+				'large' => $src,
 				'dimensions' => $width . 'x' . $height,
 			);
 		}
