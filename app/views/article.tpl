@@ -38,7 +38,7 @@
 <div id="photoGallery" class="gallery">
   <div class="grid">
   {foreach from=$article.images item=image}
-    <div class="u-1/2 u-1/4--portrait-tab-and-up grid__cell">
+    <div class="u-1/2 u-1/2--portrait-tab-and-up grid__cell">
       <a class="photo" href="{$image.large}" data-size="{$image.dimensions}" data-title="{$image.title}">
         <img src="{$image.thumbnail}" alt="{$image.title}">
       </a>
