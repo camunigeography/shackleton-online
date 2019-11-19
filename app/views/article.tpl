@@ -88,8 +88,8 @@
 <div class="grid">
   {foreach from=$article.associatedExpedition item=expedition}
   <div class="u-1/2 u-1/4--portrait-tab-and-up u-1/5--desktop grid__cell">
-    <a class="mini-teaser" href="{$expedition.url}">
-      <img src="{($expedition.image) ? $expedition.image : "$baseUrl/images/expeditions/expedition.jpg"}" alt="{$expedition.name}">
+    <a class="mini-teaser" href="{$expedition.link}">
+      <img src="{($expedition.squareImage) ? $expedition.squareImage : "$baseUrl/images/expeditions/expedition.jpg"}" alt="{$expedition.name}">
       <div class="mini-teaser__caption">
         <strong>{$expedition.name}</strong>
         <br>{$expedition.date}
