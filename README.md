@@ -35,7 +35,7 @@ Author
 
 Design and templates by Tom Hare @colourgarden, 2016
 
-Martin Lucas-Smith, Scott Polar Research Institute, Department of Geography, University of Cambridge, 2016.
+Programming by Martin Lucas-Smith, Scott Polar Research Institute, Department of Geography, University of Cambridge, 2016-2019.
 
 
 License
