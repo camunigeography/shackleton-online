@@ -23,7 +23,10 @@
 
 {$article.briefDescription}
 
-<p class="comment">Physical description:</p>
+{if ($article.fullDescription)}
+	<p class="comment">Physical description:</p>
+{/if}
+
 {$article.fullDescription}
 
 
