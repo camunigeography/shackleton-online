@@ -4,7 +4,7 @@
 	{include file='cam/header.tpl'}
 {/if}
 
-<h1>Films</h1>
+<h1>Shackleton Online: Films</h1>
 
 
 <p>In these short films about objects voted for by the public, you can learn more about Shackleton, the expeditions he went on, and his relationships with the people around him.</p>

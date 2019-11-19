@@ -1,4 +1,4 @@
-<h1>Expeditions</h1>
+<h1>Shackleton Online: Expeditions</h1>
 
 {if isSet ($integrationEnabled)}
 	{include file='head.tpl'}

@@ -4,7 +4,7 @@
 	{include file='cam/header.tpl'}
 {/if}
 
-<h1>Audio</h1>
+<h1>Shackleton Online: Audio</h1>
 
 <p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; Audio-described objects</p>
 
