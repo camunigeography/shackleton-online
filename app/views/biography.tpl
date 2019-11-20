@@ -11,6 +11,7 @@
 <img class="biography-portrait" src="{($person.image) ? $person.image : "$baseUrl/images/pioneers/person-large.jpg"}" alt="{$person.name}">
 
 <p><strong>Alias:</strong> {(($person.alias) ? $person.alias : '<em class="comment">None</em>')}</p>
+<p><strong>Title:</strong> {(($person.title) ? $person.title : '<em class="comment">Unknown</em>')}</p>
 <p><strong>Rank:</strong> {(($person.rank) ? $person.rank : '<em class="comment">Unknown</em>')}</p>
 <p><strong>Dates:</strong> {$person.date}</p>
 <p><strong>Nationality:</strong> {(($person.nationality) ? implode (', ', $person.nationality) : '<em class="comment">Unknown</em>')}</p>
