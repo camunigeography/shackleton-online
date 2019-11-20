@@ -26,7 +26,7 @@
 <br>
 
 <header class="section-headings">
-  <h3>Served aboard...</h3>
+  <h3>Related expeditions...</h3>
 </header>
 
 <div class="grid">
