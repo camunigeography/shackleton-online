@@ -123,7 +123,7 @@ $apiUrl .= '&includesuppressed=1';
 		
 		# Attach image metadata
 		foreach ($data['articles'] as $id => $article) {
-			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['images'], $article['title']);
+			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['imageFiles'], $article['title']);
 		}
 		
 		# Pass the data into the template
@@ -160,10 +160,11 @@ $apiUrl .= '&includesuppressed=1';
 		
 		$result = file_get_contents ($apiUrl);
 		$data = json_decode ($result, true);
+		//application::dumpData ($data);
 		
 		# Attach image metadata
 		foreach ($data['articles'] as $id => $article) {
-			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['images'], $article['title']);
+			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['imageFiles'], $article['title']);
 		}
 		
 		# Pass the data into the template
@@ -200,7 +201,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$article['date'] = $article['associatedExpedition'][0]['dateBegin'] . '-' . $article['associatedExpedition'][0]['dateEnd'];
 		
 		# Attach image metadata
-		$article['images'] = $this->attachImageMetadata ($article['images'], $article['title']);
+		$article['images'] = $this->attachImageMetadata ($article['imageFiles'], $article['title']);
 		
 		# Format the main texts
 		$article['briefDescription'] = application::formatTextBlock ($article['briefDescription']);
