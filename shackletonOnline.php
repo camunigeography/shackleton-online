@@ -121,11 +121,6 @@ $apiUrl .= '&includesuppressed=1';
 		$result = file_get_contents ($apiUrl);
 		$data = json_decode ($result, true);
 		
-		# Attach image metadata
-		foreach ($data['articles'] as $id => $article) {
-			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['imageFiles'], $article['title']);
-		}
-		
 		# Pass the data into the template
 		$this->template['articles'] = $data['articles'];
 		
@@ -162,11 +157,6 @@ $apiUrl .= '&includesuppressed=1';
 		$data = json_decode ($result, true);
 		//application::dumpData ($data);
 		
-		# Attach image metadata
-		foreach ($data['articles'] as $id => $article) {
-			$data['articles'][$id]['images'] = $this->attachImageMetadata ($article['imageFiles'], $article['title']);
-		}
-		
 		# Pass the data into the template
 		$this->template['articles'] = $data['articles'];
 		
@@ -200,9 +190,6 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 #!# Is date intended to be the item date or the expedition date (range)?
 		$article['date'] = $article['associatedExpedition'][0]['dateBegin'] . '-' . $article['associatedExpedition'][0]['dateEnd'];
 		
-		# Attach image metadata
-		$article['images'] = $this->attachImageMetadata ($article['imageFiles'], $article['title']);
-		
 		# Format the main texts
 		$article['briefDescription'] = application::formatTextBlock ($article['briefDescription']);
 		$article['fullDescription'] = application::formatTextBlock ($article['fullDescription']);
@@ -226,26 +213,6 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		
 		# Show the HTML
 		echo $html;
-	}
-	
-	
-	# Function to attach image metadata
-	#!# Move into API
-	private function attachImageMetadata ($images, $title)
-	{
-		foreach ($images as $index => $src) {
-			list ($width, $height, $type, $attr) = getimagesize ($_SERVER['DOCUMENT_ROOT'] . $src);
-			$images[$index] = array (
-				#!# Hard-coded title - should ideally come from MODES
-				'title' => $title,
-				'thumbnail' => $src,
-				'large' => $src,
-				'dimensions' => $width . 'x' . $height,
-			);
-		}
-		
-		# Return the data
-		return $images;
 	}
 	
 	

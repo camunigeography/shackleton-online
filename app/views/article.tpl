@@ -42,8 +42,8 @@
   <div class="grid">
   {foreach from=$article.images item=image}
     <div class="u-1/2 u-1/2--portrait-tab-and-up grid__cell">
-      <a class="photo" href="{$image.large}" data-size="{$image.dimensions}" data-title="{$image.title}">
-        <img src="{$image.thumbnail}" alt="{$image.title}">
+      <a class="photo" href="{$image.path}" data-size="{$image.width}x{$image.height}" data-title="{$article.title|htmlspecialchars}">
+        <img src="{$image.path}" alt="{$article.title|htmlspecialchars}" />
       </a>
     </div>
   {/foreach}
