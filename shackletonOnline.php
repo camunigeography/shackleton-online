@@ -226,7 +226,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		// application::dumpData ($person);
 		
 		# End if no such record
-		if ($person['error']) {
+		if (isSet ($person['error'])) {
 			$this->page404 ();
 			return;
 		}
@@ -273,7 +273,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		// application::dumpData ($people);
 		
 		# End if error
-		if ($people['error']) {
+		if (isSet ($people['error'])) {
 			$this->page404 ();
 			return;
 		}
@@ -371,7 +371,7 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		//application::dumpData ($expedition);
 		
 		# End if no such record
-		if ($expedition['error']) {
+		if (isSet ($expedition['error'])) {
 			$this->page404 ();
 			return;
 		}
