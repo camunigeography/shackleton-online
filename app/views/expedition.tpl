@@ -62,7 +62,7 @@
 </div>
 
 
-<!--
+{*
 <header class="section-headings">
   <h3>Items from the collection</h3>
 </header>
@@ -77,7 +77,7 @@
   </div>
 {/foreach}
 </div>
--->
+*}
 
 {/if} {* /error end *}
 
