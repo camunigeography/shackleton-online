@@ -8,6 +8,10 @@
 
 <p id="breadcrumb">You are in: &nbsp; <a href="{$baseUrl}/">Shackleton Online</a> &raquo; <a href="{$baseUrl}/expeditions/">Explore the expeditions</a> &raquo; Expedition</p>
 
+{if isSet ($error)}
+	<p class="error">{$error|htmlspecialchars}</p>
+{else}
+
 <img class="mb" src="{($expedition.banner) ? $expedition.banner : "$baseUrl/images/expeditions/expedition-large.jpg"}" alt="{$expedition.name}">
 
 <br>
@@ -75,6 +79,8 @@
 </div>
 -->
 
+{/if} {* /error end *}
+
 <br>
 
 {include file='search-form.tpl'}
@@ -84,3 +90,5 @@
 {else}
 	{include file='cam/footer.tpl'}
 {/if}
+
+

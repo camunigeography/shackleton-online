@@ -370,6 +370,15 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 		$expedition = json_decode ($result, true);
 		//application::dumpData ($expedition);
 		
+		# End if an error occurred, e.g. error 500
+		if (!$expedition) {
+			application::sendHeader (500);
+			$this->template['error'] = 'Sorry, a technical error occurred while trying to retrieve this page.';
+			$html = $this->templatise ();
+			echo $html;
+			return;
+		}
+		
 		# End if no such record
 		if (isSet ($expedition['error'])) {
 			$this->page404 ();
