@@ -70,7 +70,7 @@
 
 
 
-<h2>Googles</h2>
+<h2>Goggles</h2>
 
 <audio controls="controls">
 	<source src="googles.mp3" type="audio/mpeg" />
