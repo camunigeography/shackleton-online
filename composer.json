@@ -1,0 +1,15 @@
+{
+    "name": "camunigeography/shackleton-online",
+    "description": "Shackleton Online gallery",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "minimum-stability": "stable",
+    "require": {
+        "libpurecontent/frontcontrollerapplication": "^1.13",
+        "libpurecontent/application": "^1.9",
+        "camunigeography/camunisearch": "^1.5"
+    },
+    "autoload": {
+        "files": ["shackletonOnline.php"]
+    }
+}

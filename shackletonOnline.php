@@ -2,7 +2,6 @@
 
 # Class to run the Shackleton Online gallery
 
-require_once ('frontControllerApplication.php');
 class shackletonOnline extends frontControllerApplication
 {
 	# Function to assign defaults additional to the general application defaults
@@ -429,7 +428,6 @@ $article['expeditionLink'] = $this->baseUrl . '/expeditions/endurance/';
 	public function search ()
 	{
 		# Create a search instance
-		require_once ('camUniSearch.php');
 		$camUniSearch = new camUniSearch (false, 'searchform', $echoHtml = false, 'query', $this->searchInclude, $this->searchFilterTitle);
 		$html = $camUniSearch->getHtml ();
 		
