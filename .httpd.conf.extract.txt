@@ -4,14 +4,10 @@
 #   
 #   # Shackleton Online
 #   Include /path/to/shackleton-online/.httpd.conf.extract.txt
-#   Use ShackletonOnline "/museum/shackleton" "/path/to/shackleton-online" "/path/to/shackleton-online/:/path/to/smarty/:/path/to/php/libraries/"
+#   Use ShackletonOnline "/museum/shackleton" "/path/to/shackleton-online"
 
 
-<Macro ShackletonOnline $applicationBaseUrl $repoDirectory $includePath>
-	
-	<Location $applicationBaseUrl>
-		php_value include_path "$includePath"
-	</Location>
+<Macro ShackletonOnline $applicationBaseUrl $repoDirectory>
 	
 	# Load assets
 	Alias $applicationBaseUrl/css $repoDirectory/css

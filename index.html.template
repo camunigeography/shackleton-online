@@ -6,7 +6,7 @@ $settings = array (
 );
 
 # Load and run the Shackleton Online class
-require_once ('shackleton-online/shackletonOnline.php');
+require_once ('vendor/autoload.php');
 new shackletonOnline ($settings);
 
 ?>
