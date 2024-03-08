@@ -8,7 +8,7 @@
         "libpurecontent/frontcontrollerapplication": "^1.13",
         "libpurecontent/application": "^1.9",
         "camunigeography/camunisearch": "^1.5",
-        "smarty/smarty": "3.1.27 as 4.4.1"
+        "smarty/smarty": "4.4.1 as 4.4.1"
     },
     "autoload": {
         "files": ["shackletonOnline.php"]
