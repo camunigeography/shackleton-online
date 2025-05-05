@@ -21,7 +21,6 @@
       <img src="{($person.image) ? $person.image : "$baseUrl/images/pioneers/person.jpg"}" alt="{$person.name}">
       <div class="mini-teaser__caption">
         <strong>{$person.name}</strong>
-        <br>{$person.role|ucfirst}
       </div>
       <div class="mini-teaser__cta">View profile &rarr;</div>
     </a>
